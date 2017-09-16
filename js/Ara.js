@@ -1,6 +1,6 @@
 
 //Função para smooth scroll
-$('a').click(function(){
+$('a').not('.accordion').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
     }, 500);
