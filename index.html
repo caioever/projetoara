@@ -4,9 +4,10 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bgVid.css" />
 
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/bgVid.css" />
 
 </head>
 
@@ -14,7 +15,7 @@
 <body>
 	<header>
 		<!--Nav top-->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 			<a class="navbar-brand" href="#"><img src="img/logoAraSmall.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Ara.</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topBar" aria-controls="topBar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -66,34 +67,28 @@
 		</nav>
 		<!--Fim Nav top-->
 		
-<div class="homepage-hero-module">
-    <div class="video-container">
-        <div class="title-container">
-            <div class="headline">
-                	<h1 class="display-3">Bem vindo ao projeto Ara.</h1>
+		<!--Inicio Banner vid-->
+		<div class="homepage-hero-module">
+			<div class="video-container">
+				<div class="title-container">
+					<div class="headline">
+							<h1 class="display-3">Bem vindo ao projeto Ara.</h1>
 
-            </div>
-			<hr class="my-4 col-sm-9" style="background-color: #cecece;">
-            <div class="description">
-                <p class="lead" style="color: #cecece;">Uma nova plataforma focada no compartilhamento de documentarios</p>
-            </div>
-        </div>
-        <div class="filter"></div>
-        <video autoplay loop class="fillWidth">
-            <source src="VIDEOS/bg1.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.</video>
-        <div class="poster hidden">
-            <img src="#caminho img fail#" alt="">
-        </div>
-    </div>
-</div>
-		
-				<!--
-				<div class="araTop">
-					<h1 class="display-3">Bem vindo ao projeto Ara.</h1>
-					<hr class="my-4" style="background-color: #cecece;">
-					<p class="lead" style="color: #cecece;">Uma nova plataforma focada no compartilhamento de documentarios</p>
+					</div>
+					<hr class="my-4 col-sm-9" style="background-color: #cecece;">
+					<div class="description">
+						<p class="lead" style="color: #cecece;">Uma nova plataforma focada no compartilhamento de documentarios</p>
+					</div>
 				</div>
-				-->
+				<div class="filter"></div>
+				<video autoplay loop class="fillWidth">
+					<source src="VIDEOS/bg1.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.</video>
+				<div class="poster hidden">
+					<img src="#caminho img fail#" alt="">
+				</div>
+			</div>
+		</div>
+		<!--Fim Banner vid-->
 		
 	</header>
 	
@@ -101,17 +96,18 @@
 	<section id="catalogo" class="container"> <!-- seleciona a seçao para o menu levar dps-->
 		<h2>Catálogo</h2>
 			
-			<div class="card">
-				<div class="card-body">
-					Nossas postagens mais recentes, confira!
-				</div>
-			</div>
-			
-		</br>
-			
 		<div class="row"> <!-- Row com os cards-->
-			<div class="col-sm-4">
-				<div class="card" style="width: 20rem;">
+		
+			<div class="col-12" style="padding-bottom: 8px;">
+				<div class="card">
+					<div class="card-body">
+						Nossas postagens mais recentes, confira!
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-4" style="padding-bottom: 8px;">
+				<div class="card">
 					<img class="card-img-top" src="img/docs/doc01.jpg" alt="Card image cap">
 					<div class="card-body">
 						<h4 class="card-title">Can a robot pass a university entrance exam? | Noriko Arai</h4>
@@ -123,8 +119,8 @@
 				</div>
 			</div>
 				
-			<div class="col-sm-4">
-				<div class="card" style="width: 20rem;">
+			<div class="col-4" style="padding-bottom: 8px;">
+				<div class="card">
 					<img class="card-img-top" src="img/docs/doc01.jpg" alt="Card image cap">
 					<div class="card-body">
 						<h4 class="card-title">Can a robot pass a university entrance exam? | Noriko Arai</h4>
@@ -136,8 +132,8 @@
 				</div>
 			</div>
 				
-			<div class="col-sm-4">
-				<div class="card" style="width: 20rem;">
+			<div class="col-4" style="padding-bottom: 8px;">
+				<div class="card">
 					<img class="card-img-top" src="img/docs/doc01.jpg" alt="Card image cap">
 					<div class="card-body">
 						<h4 class="card-title">Can a robot pass a university entrance exam? | Noriko Arai</h4>
@@ -160,14 +156,14 @@
 		<h2>Sobre nós</h2>
 		
 		<nav class="nav nav-tabs" id="myTab" role="tablist">
-			<li class="nav-item">
-				<a class="nav-item nav-link active text-danger" id="nav-historia-tab" data-toggle="tab" href="#nav-historia" role="tab" aria-controls="nav-historia" aria-expanded="true">Nossa historia</a>
+			<li class="nav-item"> <!--Usar a classe "accordion" sempre que tiver uma ancora onde não existe scroll-->
+				<a class="nav-item nav-link active text-danger accordion" id="nav-historia-tab" data-toggle="tab" href="#nav-historia" role="tab" aria-controls="nav-historia" aria-expanded="true">Nossa historia</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-item nav-link text-danger" id="nav-valores-tab" data-toggle="tab" href="#nav-valores" role="tab" aria-controls="nav-valores">Nossos valores</a>
+				<a class="nav-item nav-link text-danger accordion" id="nav-valores-tab" data-toggle="tab" href="#nav-valores" role="tab" aria-controls="nav-valores">Nossos valores</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-item nav-link text-danger" id="nav-Equipe-tab" data-toggle="tab" href="#nav-Equipe" role="tab" aria-controls="nav-Equipe">Equipe</a>
+				<a class="nav-item nav-link text-danger accordion" id="nav-Equipe-tab" data-toggle="tab" href="#nav-Equipe" role="tab" aria-controls="nav-Equipe">Equipe</a>
 			</li>
 		</nav>
 		</br>
@@ -192,8 +188,65 @@
 	</section>
 	<!-- Fim sobre-->
 
-	<footer class="container">
-		<p>&copy; Company 2017</p>
+	<footer class="rodape-base">
+	
+		<div class="rodape-esquerda">	
+		
+			<div style="width: 20rem;">
+				<img class="card-img-top" src="img/logoAraBigWhite.png" alt="Logo">
+			</div>
+			
+				<p class="rodape-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+				
+				<p class="rodape-copy">Documentários Ara &copy; 2017 - UVA</p>
+			</div>
+			<div class="rodape-meio">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Rua Ibituruna</span> Rio de Janeiro, Brasil</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+55 21 1234 5678</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@ara.doc</a></p>
+				</div>
+
+			</div>
+			<div class="rodape-direita">
+
+				<p class="rodape-texto">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+
+				<div class="rodape-ico">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
 	</footer>
 
 	<!-- O Bootstrap usa esse popper.js -->

@@ -24,13 +24,21 @@ section h2{
 	margin-top:20px;
 }
 
-footer{
+.rodape{
 	margin-top:40px;
-	background-color: rgba(0,0,0,0.2);
+	padding: 5px;
+	background-color: #606060;
+	width: 100%;
+}
+
+.rodape-bot{
+	background-color: #212121;
+	text-align: right;
+	position: relative;
 }
 
 #catalogo{
-	margin-top:35px;
+	margin-top:1px;
 }
 
 .araTop{	
@@ -45,4 +53,164 @@ footer{
 	left:50%;
 	transform:translate(-50%,-50%);
 }
+
+/*Rodapé*/
+
+.rodape-base{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+
+.rodape-base .rodape-esquerda,
+.rodape-base .rodape-meio,
+.rodape-base .rodape-direita{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* rodape esquerda */
+
+.rodape-base .rodape-esquerda{
+	width: 40%;
+}
+
+/* rodape links */
+
+.rodape-base .rodape-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.rodape-base .rodape-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.rodape-base .rodape-copy{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* rodape centro */
+
+.rodape-base .rodape-meio{
+	width: 35%;
+}
+
+.rodape-base .rodape-meio i{
+	background-color:  #dc3545;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.rodape-base .rodape-meio i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.rodape-base .rodape-meio p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.rodape-base .rodape-meio p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.rodape-base .rodape-meio p a{
+	color:  #dc3545;
+	text-decoration: none;;
+}
+
+
+/* rodape direita */
+
+.rodape-base .rodape-direita{
+	width: 20%;
+}
+
+.rodape-base .rodape-texto{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.rodape-base .rodape-texto span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.rodape-base .rodape-ico{
+	margin-top: 25px;
+}
+
+.rodape-base .rodape-ico a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Gerenciador de responcividade */
+
+@media (max-width: 880px) {
+
+	.rodape-base{
+		font: bold 14px sans-serif;
+	}
+
+	.rodape-base .rodape-esquerda,
+	.rodape-base .rodape-meio,
+	.rodape-base .rodape-direita{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.rodape-base .rodape-meio i{
+		margin-left: 0;
+	}
+
+}
+
 
