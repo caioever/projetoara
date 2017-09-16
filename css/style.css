@@ -1,0 +1,48 @@
+#paineis-sobre{
+	margin-top:20px;
+}
+
+html,body{
+	height:100%;
+	background-color: #e8e8e8;
+}
+
+header{
+	background-image: url(../img/IMG01.jpg);
+	background-size: cover;
+	background-position: top center;
+	height: 100%;
+	position: relative;
+}
+
+header h1{
+	margin-top:0;
+	margin-bottom:0;
+}
+
+section h2{
+	margin-top:20px;
+}
+
+footer{
+	margin-top:40px;
+	background-color: rgba(0,0,0,0.2);
+}
+
+#catalogo{
+	margin-top:35px;
+}
+
+.araTop{	
+	color: #FFF;
+	text-align: center;
+	background-color: rgba(b7,b7,b7,0.2); /*0,0,0 escuro - 0,5 - opacidade*/
+	padding: 20px;	
+	width:80%;
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
