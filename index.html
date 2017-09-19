@@ -26,7 +26,7 @@
 			<div class="collapse navbar-collapse" id="topBar">
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0 smooth-scroll">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="header">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#catalogo">Catálogo</a>
@@ -35,7 +35,7 @@
 						<a class="nav-link" href="#sobreNos">Sobre</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contato</a>
+						<a class="nav-link" href="#contato">Contato</a>
 					</li>
 				</ul>
 				
@@ -189,8 +189,65 @@
 		</div>
 			
 	</section>
-	<!-- Fim sobre-->
+	<!-- Fim sobre -->
+	
+	<hr class="my-4 col-sm-10" style="background-color: #cecece;"> <!-- Divisor -->
+	
+	<!-- Inicio Contato -->
+	<section id="contato" class="container">
+		<h2 class="text-center">
+			Contato</br>
+			<small class="text-muted">Venha conversar conosco</small>
+		</h2>
+		<form>
+			<div class="form-row">
+				<div class="form-group col-md-6 col-sm-6">
+					<label for="nomeContato"> Seu Nome*:</label>
+					<div class="input-group mb-2 mb-sm-0">
+						<div class="input-group-addon">abc</div>
+						<input type="text" class="form-control" id="nomeContato" placeholder="Fulano da Silva">
+					</div>
+				</div>
+				<div class="form-group col-md-6 col-sm-6">
+					<label for="subjectContato">Assunto*</label>
+					<select class="form-control" id="subjectContato">
+						<option value="0">Selecione uma opção</option>
+						<option value="sugestao">Sugestão</option>
+						<option value="problema!">Problema</option>
+						<option value="duvida">Duvida</option>
+						<option value="critica">Reclamação</option>
+						<option value="enois">Trocar uma ideia</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6 col-sm-6">
+					<label for="emailContato"> Seu email*:</label>
+					<div class="input-group mb-2 mb-sm-0">
+						<div class="input-group-addon">@</div>
+						<input type="text" class="form-control" id="emailContato" placeholder="seu@email.com">
+					</div>
+				</div>
+				<div class="form-group col-md-6 col-sm-6">
+					<label for="foneContato"> Seu Telefone*:</label>
+					<div class="input-group mb-2 mb-sm-0">
+						<div class="input-group-addon">+55</div>
+						<input type="text" class="form-control" id="foneContato" placeholder="(00) 0 0000 0000" maxlength="15">
+					</div>
+				</div>
 
+				<div class="form-group col-md-12 col-sm-12">
+					<label for="msgContato"> Mensagem:</label>
+					<textarea class="form-control" id="msgContato" placeholder="Olá pessoal!" rows="8"></textarea>
+				</div>	
+				<div class="col-md-12 col-sm-12">
+					<input type="submit" id="enviaContato" value="Enviar" class="btn btn-danger"/>
+					<input type="button" class="btn btn-outline-secondary" value="Limpar" />
+				</div>
+			</div>
+		</form>
+	</section>
+	<!-- Fim Contato -->
+	
+	<!-- Inicio RODAPE-->
 	<footer class="rodape-base">
 	
 		<div class="rodape-esquerda">	
