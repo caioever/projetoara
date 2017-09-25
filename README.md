@@ -12,8 +12,8 @@ Elias Fontes
 Carlos Dias
 
 //Caio
-[	]	Index.html
-[	]	Corrigir logo / fazer favicon
+[ ]	Index.html
+[ OK ]	Corrigir logo / fazer favicon
 [	]	admin.html
 [	]	Catalogo.html
 

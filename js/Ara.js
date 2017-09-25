@@ -7,13 +7,6 @@ $(function() {
 		return false;
 	});
 
-	//Função para carregar dinamicamente o navtop e o rodape
-	/*$.get("./assets/navtop.html", function(data) {
-		$("#headerNav").html(data);
-	});*/
-	//$("#headerNav").load("./assets/navtop.html");
-	//$("#footer").load("assets/rodape.html");
-
 	//Mascara Jquery
 	$("#foneContato").mask("(99) 9999-9999");
 
@@ -52,3 +45,48 @@ $(function() {
 		$("span").html("");
     });
 })
+
+//Graficos dashboard
+
+var randomScalingFactor = function() {
+		return Math.round(Math.random() * 1000);
+};
+
+var config = {
+		type: 'doughnut',
+		data: {
+				datasets: [{
+						data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+						],
+						backgroundColor: [
+								window.chartColors.blue,
+								window.chartColors.red,
+						],
+						label: 'Dataset 1'
+				}],
+				labels: [
+						"Usuários Registrados",
+						"Usuários sem registro",
+				]
+		},
+		options: {
+				responsive: true,
+				legend: {
+						position: 'top',
+				},
+				title: {
+						display: true,
+						text: 'Acessos'
+				},
+				animation: {
+						animateScale: true,
+						animateRotate: true
+				}
+		}
+};
+window.onload = function() {
+		var ctx = document.getElementById("hours").getContext("2d");
+		window.myDoughnut = new Chart(ctx, config);
+};
