@@ -86,7 +86,93 @@ var config = {
 				}
 		}
 };
+
+var config1 = {
+		type: 'doughnut',
+		data: {
+				datasets: [{
+						data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+						],
+						backgroundColor: [
+								window.chartColors.green,
+								window.chartColors.orange,
+						],
+						label: 'Dataset 1'
+				}],
+				labels: [
+						"green",
+						"orange",
+				]
+		},
+		options: {
+				responsive: true,
+				legend: {
+						position: 'top',
+				},
+				title: {
+						display: true,
+						text: 'Acessos'
+				},
+				animation: {
+						animateScale: true,
+						animateRotate: true
+				}
+		}
+};
+
+var config2 = {
+		type: 'bar',
+		data: {
+				datasets: [{
+						data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+						],
+						backgroundColor: [
+								window.chartColors.green,
+								window.chartColors.orange,
+								window.chartColors.red,
+								window.chartColors.yellow,
+								window.chartColors.blue,
+						],
+						label: 'Docs mais vistos'
+				}],
+				labels: [
+						"green",
+						"orange",
+						"red",
+						"yellow",
+						"blue",
+				]
+		},
+		options: {
+				responsive: true,
+				legend: {
+						position: 'top',
+				},
+				title: {
+						display: true,
+						text: 'Docs mais vistos'
+				},
+				animation: {
+						animateScale: true,
+						animateRotate: true
+				}
+		}
+};
+
 window.onload = function() {
 		var ctx = document.getElementById("hours").getContext("2d");
 		window.myDoughnut = new Chart(ctx, config);
+
+		var ctx = document.getElementById("grafico2").getContext("2d");
+		window.myDoughnut = new Chart(ctx, config1);
+
+		var ctx = document.getElementById("grafico3").getContext("2d");
+		window.myDoughnut = new Chart(ctx, config2);
 };
