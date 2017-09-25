@@ -25,14 +25,13 @@ header h1{
 section h2{
 	margin-top:20px;
 }
-
-.contentudo{
-	margin-top:90px;
-}
-
 .nav-pills .nav-link.active, .show>.nav-pills .nav-link {
     color: #fff!important;
     background-color: #dc3545;
+}
+
+.separador.my-4{
+	background-color: #cecece;
 }
 
 /*Home*/
@@ -58,6 +57,9 @@ section h2{
 }
 
 /*Pagina admin*/
+.menuAdmin{
+	border-right: 1px solid #cecece;
+}
 .boxAdmin{
 	margin-bottom:1.5rem;
 }
