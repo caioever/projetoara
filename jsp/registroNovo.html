@@ -27,38 +27,38 @@
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="nome">Nome*:</label>
-					<input type="text" name="nome" class="form-control" onblur="validarNome(this)"/>
+					<input type="text" name="nome" id="nome" class="form-control" onblur="validarNome(this)"/>
 				</div>
 
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="sobrenome">Sobrenome*:</label>
-					<input type="text" name="sobrenome" class="form-control" maxlength="15" size="40" onblur="validarSobrenome(this)"/>
+					<input type="text" name="sobrenome" id="sobrenome" class="form-control" maxlength="15" size="40" onblur="validarSobrenome(this)"/>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="senha">Senha*:</label>
-					<input type="password" name="senha" class="form-control" maxlength="30" size="40" onblur="validarSenha(this)"/>
+					<input type="password" name="senha" id="senha" class="form-control" maxlength="30" size="40" onblur="validarSenha(this)"/>
 				</div>
 
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="confirmaSenha">Confirmar Senha*:</label>
-					<input type="password" name="confirmaSenha" class="form-control" maxlength="30" size="40" onblur="validarconfirmaSenha(this)"/>
+					<input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control" maxlength="30" size="40" onblur="validarconfirmaSenha(this)"/>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="email">Email*:</label>
-					<input type="email" name="email" class="form-control" maxlength="50" size="40" onblur="validarEmail(this)"/>
+					<input type="email" name="email" id="email" class="form-control" maxlength="50" size="40" onblur="validarEmail(this)"/>
 				</div>
 
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="sexo">Sexo*:</label>
-					<div class="form-control form-check-inline">
+					<div class="form-check form-check">
 						<label class="form-check-label">
-							<input class="form-check-input" type="radio" class="form-control" name="rbsexo" value="S" />Masculino
+							<input class="form-check-input" type="radio" class="form-control" name="rbsexo" value="S" checked="checked" />Masculino
 						</label>
 						<label class="form-check-label">
 							<input class="form-check-input" type="radio" class="form-control" name="rbsexo" value="N" />Feminino
@@ -70,7 +70,7 @@
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="foneContato">Telefone*:</label>
-					<input type="text" name="telefone" class="form-control" id="foneContato" maxlength="10" size="40" onblur="validarTelefone(this)"/>
+					<input type="text" name="telefone" class="form-control" id="telefone" maxlength="10" size="40" onblur="validarTelefone(this)"/>
 				</div>
 
 				<div class="form-group col-md-6 col-sm-6">
@@ -82,7 +82,7 @@
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="preferencia">Língua de Preferência: </label>
-					<select class="form-control" name="preferencia">
+					<select class="form-control" name="preferencia" id="preferencia">
 						<option value="">Selecione uma opção</option>
 						<option value="portugues">Português</option>
 						<option value="ingles">Inglês</option>
