@@ -10,9 +10,6 @@ $(function() {
 	//Mascara Jquery
 	$("#foneContato").mask("(99) 9999-9999");
 	
-	//Máscaras JQuery - registroNovo
-	$("#telefone").mask("(99) 9999-9999");
-	$("#dataNascimento").mask("99/99/9999");
 
 	//Regras de validação dos campos do form
     $("#formContato").validate({ //usa o name dos campos do form
