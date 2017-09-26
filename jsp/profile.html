@@ -25,12 +25,8 @@
 			<div class="p-3 mb-2 bg-secondary text-white col-12 text-right">Bem vindo Fulano.</div>
 	<!-- Inicio Side Menu-->
 			<div class="nav flex-column nav-pills col-3 menuAdmin rounded" id="v-pills-tab" style="padding-right: 0px;" role="tablist">
-	 			<a class="nav-link text-dark active semSmooth" id="v-pills-dash-tab" data-toggle="pill" href="#v-pills-dash" role="tab" aria-controls="v-pills-dash" aria-expanded="true">Dashboard</a>
-	 			<a class="nav-link text-dark semSmooth" id="v-pills-perf-tab" data-toggle="pill" href="#v-pills-perf" role="tab" aria-controls="v-pills-perf" aria-expanded="true">Perfil</a>
-				<a class="nav-link text-dark semSmooth" id="v-pills-admUser-tab" data-toggle="pill" href="#v-pills-admUser" role="tab" aria-controls="v-pills-admUser" aria-expanded="true">Gerenciar usuários</a>
-				<a class="nav-link text-dark semSmooth" id="v-pills-admDoc-tab" data-toggle="pill" href="#v-pills-admDoc" role="tab" aria-controls="v-pills-admDoc" aria-expanded="true">Gerenciar Documentários</a>
-	 			<a class="nav-link text-dark semSmooth" id="v-pills-newDoc-tab" data-toggle="pill" href="#v-pills-newDoc" role="tab" aria-controls="v-pills-newDoc" aria-expanded="true">Novo Documentário</a>
-	 			<a class="nav-link text-dark semSmooth" id="v-pills-config-tab" data-toggle="pill" href="#v-pills-config" role="tab" aria-controls="v-pills-config" aria-expanded="true">Configurações</a>
+	 			<a class="nav-link text-dark semSmooth active " id="v-pills-perf-tab" data-toggle="pill" href="#v-pills-perf" role="tab" aria-controls="v-pills-perf" aria-expanded="true">Perfil</a>
+				<a class="nav-link text-dark semSmooth" id="v-pills-admDoc-tab" data-toggle="pill" href="#v-pills-admDoc" role="tab" aria-controls="v-pills-admDoc" aria-expanded="true">Lista de favoritos</a>
 				<hr class="separador">
 			</div>
 	<!-- fim Side menu-->
@@ -38,31 +34,10 @@
 	<!-- Inicio conteudoAdminPainel-->
 			<div class="tab-content container col-9" id="v-pills-tabContent">
 
-				<!-- Inicio -Dashboard  -->
-				<div class="tab-pane fade show active" id="v-pills-dash" role="tabpanel" aria-labelledby="v-pills-dash-tab">
-					<h1 class="display-4">Dashboard: </h1>
 
-					<hr class="separador">
-
-					<div class="canvas-container my-4 row">
-						<div style="width: 50%">
-							<canvas id="hours"></canvas>
-						</div>
-						<div style="width: 50%">
-							<canvas id="grafico2"></canvas>
-						</div>
-					</div>
-					<div class="canvas-container my-4 row">
-						<div class="mx-auto" style="width: 70%">
-							<canvas id="grafico3"></canvas>
-						</div>
-					</div>
-
-				</div>
-				<!-- Fim -Dashboard -->
 
 				<!-- Inicio -Perfil -->
-	  		<div class="tab-pane fade" id="v-pills-perf" role="tabpanel" aria-labelledby="v-pills-perf-tab">
+	  		<div class="tab-pane fade show active" id="v-pills-perf" role="tabpanel" aria-labelledby="v-pills-perf-tab">
 					<h1 class="display-4">Perfil: </h1>
 
 					<hr class="separador">
@@ -89,48 +64,6 @@
 				</div>
 				<!-- Fim -Perfil -->
 
-				<!-- inicio -Gerenciador_de_usuario -->
-	  		<div class="tab-pane fade" id="v-pills-admUser" role="tabpanel" aria-labelledby="v-pills-admUser-tab">
-					<h1 class="display-4">Usuários: </h1>
-					<hr class="separador">
-
-					<ul class="list-group boxAdmin">
-	  				<li class="list-group-item">
-							<img src="holder.js/40x40" alt="..." class="rounded mr-2">
-							Fulano
-							<div class="adminOPT float-right">
-								<button type="button" class="btn btn-info">Editar</button>
-								<button type="button" class="btn btn-danger">Apagar</button>
-							</div>
-						</li>
-
-	  				<li class="list-group-item">
-							<img src="holder.js/40x40" alt="..." class="rounded mr-2">
-							Caio Everest
-							<div class="adminOPT float-right">
-								<button type="button" class="btn btn-info">Editar</button>
-								<button type="button" class="btn btn-danger">Apagar</button>
-							</div>
-						</li>
-	  				<li class="list-group-item">
-							<img src="holder.js/40x40" alt="..." class="rounded mr-2">
-							Elias Fontes
-							<div class="adminOPT float-right">
-								<button type="button" class="btn btn-info">Editar</button>
-								<button type="button" class="btn btn-danger">Apagar</button>
-							</div>
-						</li>
-	  				<li class="list-group-item">
-							<img src="holder.js/40x40" alt="..." class="rounded mr-2">
-							Carlos
-							<div class="adminOPT float-right">
-								<button type="button" class="btn btn-info">Editar</button>
-								<button type="button" class="btn btn-danger">Apagar</button>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<!-- Fim -Gerenciador_de_usuario -->
 
 				<!-- Inicio -Gerenciador_de_Documentario -->
 				<div class="tab-pane fade" id="v-pills-admDoc" role="tabpanel" aria-labelledby="v-pills-admDoc-tab">
@@ -145,8 +78,7 @@
     					</div>
     					<p class="mb-1">Meet Todai Robot, an AI project that performed in the top 20 percent of students on the entrance exam for the University of Tokyo -- without actually understanding a thing. While it's not matriculating anytime soon</p>
 							<div class="adminOPT">
-								<button type="button" class="btn btn-info">Editar</button>
-								<button type="button" class="btn btn-danger">Apagar</button>
+								<button type="button" class="btn btn-danger">Visualizar</button>
 							</div>
   					</a>
 
@@ -157,8 +89,7 @@
     					</div>
     					<p class="mb-1">Meet Todai Robot, an AI project that performed in the top 20 percent of students on the entrance exam for the University of Tokyo -- without actually understanding a thing. While it's not matriculating anytime soon</p>
 							<div class="adminOPT">
-								<button type="button" class="btn btn-info">Editar</button>
-								<button type="button" class="btn btn-danger">Apagar</button>
+								<button type="button" class="btn btn-danger">Visualizar</button>
 							</div>
   					</a>
 
@@ -169,30 +100,16 @@
     					</div>
     					<p class="mb-1">Meet Todai Robot, an AI project that performed in the top 20 percent of students on the entrance exam for the University of Tokyo -- without actually understanding a thing. While it's not matriculating anytime soon</p>
 							<div class="adminOPT">
-								<button type="button" class="btn btn-info">Editar</button>
-								<button type="button" class="btn btn-danger">Apagar</button>
+								<button type="button" class="btn btn-danger">Visualizar</button>
 							</div>
   					</a>
+
+
 					</div>
 				</div>
 				<!-- Fim -Gerenciador_de_Documentario -->
 
-				<!-- Inicio -Novo_documentario -->
-	  		<div class="tab-pane fade" id="v-pills-newDoc" role="tabpanel" aria-labelledby="v-pills-newDoc-tab">
-					<h1 class="display-4">Novo documentário: </h1>
-					<hr class="separador">
-					<form>
-						
-					</form>
-				</div>
-				<!-- Fim -Novo_documentario -->
 
-				<!-- Inicio -configuração -->
-	  		<div class="tab-pane fade" id="v-pills-config" role="tabpanel" aria-labelledby="v-pills-config-tab">
-					<h1 class="display-4">Configurações: </h1>
-					<hr class="separador">
-				</div>
-				<!-- Fim -configuração -->
 			</div>
 		</div>
 	</div>
