@@ -12,7 +12,7 @@ Elias Fontes
 Carlos Dias
 
 //Caio
-[ ]	Index.html
+[ OK ]	Index.html
 [ OK ]	Corrigir logo / fazer favicon
 [	]	admin.html
 [	]	Catalogo.html
@@ -26,7 +26,7 @@ Carlos Dias
 		|-Língua de preferencia
 
 //Carlos
-[	]	docDisplay.html
+[ OK ]	docDisplay.html
 		|-Video
 		|-Nome do doc
 		|-Diretor 			- ano 	- ranking estrela
