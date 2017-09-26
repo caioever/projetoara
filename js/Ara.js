@@ -39,36 +39,35 @@ $(function() {
 	//Regras de validação para os campos de registro de usuario
 	$("#formCadastro").validate({
 		ignore:'',
-	rules: {
-		nome: {required: true, minlength: 4},
-		sobrenome: {required: true, minlength: 4},
-		senha: {required: true, minlength: 6},
-		confirmaSenha: {required: true, minlength: 6, equalTo:"#senha"},
-		email: {required: true, email:true},
-		rbsexo: {required:true},
-		telefone: {required: true},
-		dataNascimento: {required:true },
-		preferencia: {required: false}
-	},
-	messages: {
-		nome: {required: "*Informe o nome",
-		minlength: "*Informe pelo menos 4 caracteres"},
-		sobrenome: {required: "*Informe o sobrenome",
-		minlength: "*Informe pelo menos 4 caracteres"},
-		senha: {required: "*Informe uma senha",
-		minlength: "*A senha precisa ter pelo menos 6 dígitos"},
-		confirmaSenha: {required:"*Repita sua senha",
-		minlength: "*A senha precisa ter pelo menos 6 dígitos",
-		equalTo: "*As senhas informadas não conferem"},
-		email: {required: "*Informe um email",
-		email:"*Informe um email válido"},
-		//rbsexo: {required: "*Selecione uma opção"},
-		telefone: {required: "*Informe um telefone"},
-		dataNascimento: {required: "*Informe a data de nascimento"},
-	},
-
+		rules: {
+			nome: {required: true, minlength: 4},
+			sobrenome: {required: true, minlength: 4},
+			senha: {required: true, minlength: 6},
+			confirmaSenha: {required: true, minlength: 6, equalTo:"#senha"},
+			email: {required: true, email:true},
+			rbsexo: {required:true},
+			telefone: {required: true},
+			dataNascimento: {required:true },
+			preferencia: {required: false}
+		},
+		messages: {
+			nome: {required: "*Informe o nome",
+			minlength: "*Informe pelo menos 4 caracteres"},
+			sobrenome: {required: "*Informe o sobrenome",
+			minlength: "*Informe pelo menos 4 caracteres"},
+			senha: {required: "*Informe uma senha",
+			minlength: "*A senha precisa ter pelo menos 6 dígitos"},
+			confirmaSenha: {required:"*Repita sua senha",
+			minlength: "*A senha precisa ter pelo menos 6 dígitos",
+			equalTo: "*As senhas informadas não conferem"},
+			email: {required: "*Informe um email",
+			email:"*Informe um email válido"},
+			//rbsexo: {required: "*Selecione uma opção"},
+			telefone: {required: "*Informe um telefone"},
+			dataNascimento: {required: "*Informe a data de nascimento"},
+		},
   }),
-		
+
 
 	//Regras de validação para os campos de novo documentário
 	$("#formNewDoc").validate({
