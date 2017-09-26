@@ -70,13 +70,27 @@ $(function() {
 					}
 	});
 
-    //Limpar campos de um form quando o usuário clicar no botão Limpar
-    $(".btlimpar").click(function(){
-    	$('#formContato').each (function(){
-    		  this.reset();
-    	});
-		$("span").html("");
-    });
+	//Verifica opção em idiomaDoc para saber se abre caixa de legenda
+	$("#elsePort").hide();
+	$("#idiomaDoc").on('change', function(){
+		var valor = $(this).val();
+		if(valor){
+			if(valor != "portugues"){
+				$("#elsePort").show();
+			}
+		}
+		else{
+			$("#elsePort").hide();
+		}
+	});
+
+  //Limpar campos de um form quando o usuário clicar no botão Limpar
+  $(".btlimpar").click(function(){
+  	$('#formContato').each (function(){
+  		  this.reset();
+  	});
+	$("span").html("");
+  });
 })
 
 
