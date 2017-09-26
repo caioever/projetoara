@@ -36,6 +36,8 @@ $(function() {
 					}
   });
 
+	//Regras de validação para os campos de registro de usuario
+
 	//Regras de validação para os campos de novo documentário
 	$("#formNewDoc").validate({
 		ignore:'',
