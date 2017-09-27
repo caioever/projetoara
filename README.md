@@ -13,7 +13,7 @@ Carlos Dias
 
 //Caio
 [ OK ]	Index.html
-[ OK ]	Corrigir logo / fazer favicon
+[ OK ]	Corrigir logo / [	]fazer favicon
 [	OK ]	admin.html
 [	OK ]	Catalogo.html
 
