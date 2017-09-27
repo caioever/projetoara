@@ -14,11 +14,11 @@ Carlos Dias
 //Caio
 [ OK ]	Index.html
 [ OK ]	Corrigir logo / fazer favicon
-[	]	admin.html
-[	]	Catalogo.html
+[	OK ]	admin.html
+[	OK ]	Catalogo.html
 
 //Elias
-[	]	resgistroNovo.html
+[	OK ]	resgistroNovo.html
 		|-Nome				Sobrenome		
 		|-Senha				Confirma Senha
 		|-Email				Data de aniversário
