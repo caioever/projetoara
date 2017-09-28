@@ -32,4 +32,4 @@ Carlos Dias
 		|-Diretor 			- ano 	- ranking estrela
 		|-Sinopse 		- Palavras chaves
 		|-Doc sugeridos
-[	]	profile.html
+[	OK ]	profile.html
