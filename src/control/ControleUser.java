@@ -57,7 +57,7 @@ public class ControleUser extends HttpServlet {
 			String sobrenome = request.getParameter("sobrenome");
 			String sexo = request.getParameter("rbsexo");
 			// String tipoConta = request.getParameter("tipoConta");
-			// String pathImgPerf = request.getParameter("pathImgPerf");
+			String pathImgPerf = request.getParameter("pathImgPerf");
 			String dtNasc = request.getParameter("dtnasc");
 			String telefone = request.getParameter("telefone");
 			String lingPref = request.getParameter("lingPref");
@@ -70,8 +70,8 @@ public class ControleUser extends HttpServlet {
 			usuario.setNome(nome);
 			usuario.setSobrenome(sobrenome);
 			usuario.setSexo(sexo);
-			// cliente.setTipoConta(tipoConta);
-			// cliente.setPathImgPerf(pathImgPerf);
+			// usuario.setTipoConta(tipoConta);
+			usuario.setPathImgPerf(pathImgPerf);
 			usuario.setDtNasc(UtilsBanco.converterData(dtNasc));
 			usuario.setTelefone(telefone);
 			usuario.setLingPref(lingPref);
