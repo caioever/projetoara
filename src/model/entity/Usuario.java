@@ -3,6 +3,7 @@ package model.entity;
 import java.util.GregorianCalendar;
 
 public class Usuario {
+	private String id;
 	private String nome;
 	private String sobrenome;
 	private String sexo;

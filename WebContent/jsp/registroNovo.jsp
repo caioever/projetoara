@@ -3,7 +3,9 @@
 	<div class="jumbotron col-md-12 col-sm-12 bg-danger rounded-0">
 		<h2 class="display-4 container text-white">Cadastro de Usuário</h2>
 	</div>
-
+	<div id="mensagens">
+		${msg} <!-- INSERIDO NA AULA DE BACKEND -->	
+	</div>
 	<form name="formCadastro" id="formCadastro" onsubmit="return validarUsuario(this)">
 		<fieldset class="container my-4">
 			<legend class="control-label"> Dados do Usuário </legend>
@@ -54,12 +56,12 @@
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="foneContato">Telefone*:</label>
-					<input type="text" name="telefone" class="form-control" id="foneContato" maxlength="13" size="40" onblur="validarTelefone(this)"/>
+					<input type="text" name="telefone" class="form-control" id="foneContato" maxlength="15" size="40" onblur="validarTelefone(this)"/>
 				</div>
 
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="dataNascimento">Data de Nascimento*:</label>
-					<input type="date" name="dataNascimento" class="form-control" maxlength="8" size="40" onblur="validardataNascimento(this)"/>
+					<input type="date" name="dataNascimento" class="form-control" maxlength="10" size="40" onblur="validardataNascimento(this)"/>
 				</div>
 			</div>
 

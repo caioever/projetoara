@@ -3,6 +3,7 @@ package model.persistence;
 import java.sql.SQLException;
 import java.util.GregorianCalendar;
 
+import model.entity.Cliente;
 import model.entity.Usuario;
 
 public class UserDao extends Dao{
@@ -63,6 +64,28 @@ public class UserDao extends Dao{
 			return success;
 	}
 
-	/* FALTAM OS MÉTODOS ALTERAR E CONSULTAR*/
+	public Usuario getPerfil(String id)throws Exception{
+		Usuario usuario = null;
+		try{
+			open();
+			
+			//Junçao das tabelas Usuário e Cliente
+			stmt = con.prepareStatement("select * from usuario,cliente "
+					+ "where cliente.cpf = ? and usuario.email = cliente.id_email" );
+			stmt.setString(1,id);
+			rs = stmt.executeQuery();
+			if(rs.next()){
+				
+				usuario = new Usuario(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("sexo"), rs.getInt("tipoConta"),
+						rs.getString("pathImgPerf"), UtilsBanco.converterDataBancoToGC(rs.getString("dtNasc")), rs.getString("telefone"), rs.getString("lingPref"),
+						rs.getString("email"), rs.getString("senha"));	
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			close();
+		}		
+		return usuario;
+	}
 	
 }

@@ -1,4 +1,4 @@
-<jsp:include page="topoNav.jsp"></jsp:include>
+<div class="fixed-top"><jsp:include page="topoNav.jsp"></jsp:include></div>
 
 	<header>
 		<!--Inicio Banner vid-->
@@ -23,7 +23,6 @@
 			</div>
 		</div>
 		<!--Fim Banner vid-->
-
 	</header>
 
 	<!-- Inicio Catálogo-->

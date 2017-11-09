@@ -44,33 +44,7 @@
 				</div>
 				<!-- Fim -Dashboard -->
 
-				<!-- Inicio -Perfil -->
-	  		<div class="tab-pane fade" id="v-pills-perf" role="tabpanel" aria-labelledby="v-pills-perf-tab">
-					<h1 class="display-4">Perfil: </h1>
-
-					<hr class="separador">
-
-					<div class="box-perfil">
-						<img src="holder.js/200x200" alt="..." class="rounded float-right">
-						<h5>
-							Nome:
-							<small class="text-muted">Fulano</small>
-						</h5>
-						<h5>
-							Sexo:
-							<small class="text-muted">Masculino</small>
-						</h5>
-						<h5>
-							Tipo de conta:
-							<small class="text-muted">Administrador</small>
-						</h5>
-						<h5>
-							Email:
-							<small class="text-muted">fulano.beltrano@mymail.com</small>
-						</h5>
-					</div>
-				</div>
-				<!-- Fim -Perfil -->
+				<jsp:include page="profile.jsp"></jsp:include><!-- Pill perfil -->
 
 				<!-- inicio -Gerenciador_de_usuario -->
 	  		<div class="tab-pane fade" id="v-pills-admUser" role="tabpanel" aria-labelledby="v-pills-admUser-tab">

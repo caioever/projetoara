@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.entity.Cliente;
 import model.entity.Usuario;
+import model.persistence.ClienteDao;
 import model.persistence.UserDao;
 import model.persistence.UtilsBanco;
 
@@ -41,6 +43,8 @@ public class ControleUser extends HttpServlet {
 
 			if(url.equalsIgnoreCase("/jsp/cadastro_novo.html")){
 				cadNewUser(request, response);
+			}else if(url.equalsIgnoreCase("/jsp/profile.html")){
+				perfil(request, response);
 			}else{
 				response.sendRedirect("/");
 			}
@@ -48,7 +52,7 @@ public class ControleUser extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-	
+	//cadastro de usuário
 	protected void cadNewUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		try{
@@ -81,21 +85,44 @@ public class ControleUser extends HttpServlet {
 			if(new UserDao().cadastrar(usuario)){
 				/*setar a mensagem de sucesso no request*/
 				request.setAttribute("msg", 
-				"<div class='alert alert-success'>Cliente cadastrado com sucesso</div>");
+				"<div class='alert alert-success'>Usuário cadastrado com sucesso</div>");
 			}else{
 				/*setar a mensagem de erro no request*/
 				request.setAttribute("msg", 
-				"<div class='alert alert-danger'>Cliente já possui possui um cadastro no sistema</div>");
+				"<div class='alert alert-danger'>Usuário já possui possui um cadastro no sistema</div>");
 			}
 		}catch(Exception e){
 			e.printStackTrace();
 			/*setar a mensagem de erro no request*/
 			request.setAttribute("msg", 
-					"<div class='alert alert-danger'>Funcionario não cadastrado</div>");
+					"<div class='alert alert-danger'>Usuário não cadastrado</div>");
 		}finally{
 			request.getRequestDispatcher("registroNovo.jsp").forward(request, response);
 		}
 		
-}
+	}
+	//fim cadastro
+	
+	//perfilGet
+	protected void perfil(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try{
+			/* Pegar o cpf digitado na tela */			
+			String id = new String(request.getParameter("id"));
+			/* Instanciar a classe DaoCliente */
+			UserDao banco = new UserDao();
+			/* Acionar o método da classe Dao Cliente que retorna os dados de um cliente a 
+			 * partir do CPF do cliente*/
+			Usuario usuario = banco.getPerfil(id);
+		
+			request.setAttribute("UserName", usuario.getNome());
+			request.setAttribute("sex", usuario.getSexo());
+			request.setAttribute("UserTipe", usuario.getTipoConta());
+			request.setAttribute("UserEmail", usuario.getEmail());
+			request.getRequestDispatcher("profile.jsp").forward(request, response);
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 
 }
