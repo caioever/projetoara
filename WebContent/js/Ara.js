@@ -8,7 +8,7 @@ $(function() {
 	});
 
 	//Mascara Jquery
-	$("#foneContato").mask("(99) 9999-9999");
+	$("#foneContato").mask("(99) 99999-9999");
 
 
 	//Regras de validação dos campos do form

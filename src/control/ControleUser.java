@@ -13,7 +13,7 @@ import model.entity.Usuario;
 import model.persistence.UserDao;
 import model.persistence.UtilsBanco;
 
-@WebServlet({"/ControlePainel", "/jsp/cadUser.html"})
+@WebServlet({"/NovoUsuário", "/jsp/cadastro_novo.html"})
 
 public class ControleUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -39,7 +39,7 @@ public class ControleUser extends HttpServlet {
 			//Pegar a URL que foi executada
 			String url = request.getServletPath();
 
-			if(url.equalsIgnoreCase("/jsp/cadcliente.html")){
+			if(url.equalsIgnoreCase("/jsp/cadastro_novo.html")){
 				cadNewUser(request, response);
 			}else{
 				response.sendRedirect("/");
@@ -93,7 +93,7 @@ public class ControleUser extends HttpServlet {
 			request.setAttribute("msg", 
 					"<div class='alert alert-danger'>Funcionario não cadastrado</div>");
 		}finally{
-			request.getRequestDispatcher("CadastrarCliente.jsp").forward(request, response);
+			request.getRequestDispatcher("registroNovo.jsp").forward(request, response);
 		}
 		
 }
