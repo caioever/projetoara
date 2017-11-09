@@ -1,77 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!doctype html>
-<html>
+<jsp:include page="topoNav.jsp"></jsp:include>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="keywords" content="documentario, estudo, video, pesquisa, ciencia, universidade" />
-
-	<title>Ara.DocumentÃ¡rios</title>
-
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bgVid.css" />
-
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
-
-
-<body>
 	<header>
-		<!--Nav top-->
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#"><object type="image/svg+xml" data="img/logoAraSmall.svg" width="30" height="30" class="d-inline-block align-top" alt=""></object> Ara.</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topBar" aria-controls="topBar" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="topBar">
-				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-					<li class="nav-item active">
-						<a class="nav-link" href="header">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#catalogo">CatÃ¡logo</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#sobreNos">Sobre</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#contato">Contato</a>
-					</li>
-				</ul>
-
-				<ul class="navbar-nav my-2 my-lg-0">
-					<li class="dropdown">
-							<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Login
-							</button>
-							<div class="dropdown-menu dropdown-menu-right" style="padding: 15px; padding-bottom: 0px; width: 300px;">
-								<form action="[AÃ‡AO]" method="post" accept-charset="UTF-8">
-									<label for="logEmail">Email</label>
-									<input type="email" class="form-control" id="logEmail" aria-describedby="emailHelp" placeholder="Digite seu email">
-
-									<label for="logPass">Senha</label>
-									<input type="password" class="form-control" id="logPass" placeholder="digite sua senha">
-									<small id="emailHelp" class="form-text text-muted">Esqueceu sua senha?</small>
-									<label class="form-check-label">
-										<input type="checkbox" class="form-check-input">
-										Lembrar-se
-									</label>
-
-									<input class="btn btn-danger" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Entrar" />
-								</form>
-								<div class="dropdown-divider"></div>
-								<input class="btn btn-danger" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Cria uma nova conta"
-								onclick="window.location.href='jsp/registroNovo.html'"/>
-								<div class="dropdown-divider"></div>
-							</div>
-					</li>
-				</ul>
-
-			</div>
-		</nav>
-		<!--Fim Nav top-->
-
 		<!--Inicio Banner vid-->
 		<div class="homepage-hero-module">
 			<div class="video-container">
@@ -87,7 +16,7 @@
 				</div>
 				<div class="filter"></div>
 				<video autoplay loop class="fillWidth">
-					<source src="VIDEOS/bg1.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.</video>
+					<source src="../VIDEOS/bg1.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.</video>
 				<div class="poster hidden">
 					<img src="#caminho img fail#" alt="">
 				</div>
@@ -97,9 +26,9 @@
 
 	</header>
 
-	<!-- Inicio CatÃ¡logo-->
-	<section id="catalogo" class="container mx-auto"> <!-- seleciona a seÃ§ao para o menu levar dps-->
-		<h2 class="text-center" style="margin-bottom: 30px">CatÃ¡logo </br>
+	<!-- Inicio Catálogo-->
+	<section id="catalogo" class="container mx-auto"> <!-- seleciona a seçao para o menu levar dps-->
+		<h2 class="text-center" style="margin-bottom: 30px">Catálogo </br>
 			<small class="text-muted">Nossas postagens mais recentes, confira!</small>
 		</h2>
 
@@ -107,9 +36,9 @@
 
 			<div class="col my-1">
 				<div class="card" style="width: 20rem;">
-					<img class="card-img-top"src="img/docs/doc01.jpg" alt="Card image cap">
+					<img class="card-img-top"src="../img/docs/doc01.jpg" alt="Card image cap">
 					<div class="card-body">
-						<h4 class="card-title" style="height: 5rem;">Bolo de LimÃ£o | Noriko Arai</h4>
+						<h4 class="card-title" style="height: 5rem;">Bolo de Limão | Noriko Arai</h4>
 						<p class="card-text">
 							Meet Todai Robot, an AI project that performed in the top 20 percent of students on the entrance exam for the University of Tokyo -- without actually understanding a thing. While it's not matriculating anytime soon
 						</p>
@@ -120,7 +49,7 @@
 
 			<div class="col my-1">
 				<div class="card" style="width: 20rem;">
-					<img class="card-img-top" src="img/docs/doc01.jpg" alt="Card image cap">
+					<img class="card-img-top" src="../img/docs/doc01.jpg" alt="Card image cap">
 					<div class="card-body">
 						<h4 class="card-title" style="height: 5rem;">Can a robot pass a university entrance exam? | Noriko Arai</h4>
 						<p class="card-text">
@@ -133,7 +62,7 @@
 
 			<div class="col my-1">
 				<div class="card" style="width: 20rem;">
-					<img class="card-img-top" src="img/docs/doc01.jpg" alt="Card image cap">
+					<img class="card-img-top" src="../img/docs/doc01.jpg" alt="Card image cap">
 					<div class="card-body">
 						<h4 class="card-title" style="height: 5rem;">Can a robot pass a university entrance exam? | Noriko Arai</h4>
 						<p class="card-text">
@@ -146,16 +75,16 @@
 
 		</div>
 	</section>
-	<!-- Fim CatÃ¡logo-->
+	<!-- Fim Catálogo-->
 
 	<hr class="separador col-sm-10"> <!-- Divisor -->
 
 	<!-- Inicio sobre-->
 	<section id="sobreNos" class="container">
-		<h2>Sobre nÃ³s</h2>
+		<h2>Sobre nós</h2>
 
 		<nav class="nav nav-tabs" id="myTab" role="tablist">
-			<li class="nav-item"> <!--Usar a classe "semSmooth" sempre que tiver uma ancora onde nÃ£o existe scroll-->
+			<li class="nav-item"> <!--Usar a classe "semSmooth" sempre que tiver uma ancora onde não existe scroll-->
 				<a class="nav-item nav-link active text-danger semSmooth" id="nav-historia-tab" data-toggle="tab" href="#nav-historia" role="tab" aria-controls="nav-historia" aria-expanded="true">Nossa historia</a>
 			</li>
 			<li class="nav-item">
@@ -210,11 +139,11 @@
 				<div class="form-group col-md-6 col-sm-6">
 					<label for="subjectContato">Assunto*</label>
 					<select class="form-control" name="subjectContato" id="subjectContato">
-						<option value="">Selecione uma opÃ§Ã£o</option>
-						<option value="sugestao">SugestÃ£o</option>
+						<option value="">Selecione uma opção</option>
+						<option value="sugestao">Sugestão</option>
 						<option value="problema!">Problema</option>
 						<option value="duvida">Duvida</option>
-						<option value="critica">ReclamaÃ§Ã£o</option>
+						<option value="critica">Reclamação</option>
 						<option value="enois">Trocar uma ideia</option>
 					</select>
 					<span id="erro_subjectContato" class="erroFormContato"></span> <!-- ERRO ASSUNTO -->
@@ -240,7 +169,7 @@
 
 				<div class="form-group col-md-12 col-sm-12">
 					<label for="msgContato"> Mensagem:</label>
-					<textarea class="form-control" name="msgContato" id="msgContato" placeholder="OlÃ¡ pessoal!" rows="8"></textarea>
+					<textarea class="form-control" name="msgContato" id="msgContato" placeholder="Olá pessoal!" rows="8"></textarea>
 					<span id="erro_msgContato" class="erroFormContato"></span> <!-- ERRO MENSSAGEM -->
 				</div>
 
@@ -260,24 +189,24 @@
 		<div class="rodape-esquerda">
 
 			<div style="width: 20rem;">
-				<img class="card-img-top" src="img/logoAraBigWhite.png" alt="Logo">
+				<img class="card-img-top" src="../img/logoAraBigWhite.png" alt="Logo">
 			</div>
 
 				<p class="rodape-links">
 					<a href="#">Home</a>
-					Â·
+					·
 					<a href="#">Blog</a>
-					Â·
+					·
 					<a href="#">Pricing</a>
-					Â·
+					·
 					<a href="#">About</a>
-					Â·
+					·
 					<a href="#">Faq</a>
-					Â·
+					·
 					<a href="#">Contact</a>
 				</p>
 
-				<p class="rodape-copy">DocumentÃ¡rios Ara &copy; 2017 - UVA</p>
+				<p class="rodape-copy">Documentários Ara &copy; 2017 - UVA</p>
 			</div>
 			<div class="rodape-meio">
 
@@ -300,7 +229,7 @@
 			<div class="rodape-direita">
 
 				<p class="rodape-texto">
-					<span>Sobre nÃ³s</span>
+					<span>Sobre nós</span>
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
 				</p>
 
@@ -318,21 +247,21 @@
 
 	<!-- O Bootstrap usa esse popper.js -->
 	<!-- <script src="popper.js-1.12.3/dist/popper.min.js"> </script>-->
-	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-	<script src="js/jquery-validation/jquery.validate.js" type="text/javascript"></script>
-	<script src="js/jquery-maskedinput/src/jquery.maskedinput.js" type="text/javascript"></script>
+	<script src="../js/jquery-validation/jquery.validate.js" type="text/javascript"></script>
+	<script src="../js/jquery-maskedinput/src/jquery.maskedinput.js" type="text/javascript"></script>
 	<!-- Bootstrap-->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	<!-- Holder.js-->
-	<script src="js/holder.min.js"></script>
+	<script src="../js/holder.min.js"></script>
 	<!-- Graficos -->
-	<script src="js/Chart.bundle.min.js"></script>
+	<script src="../js/Chart.bundle.min.js"></script>
 	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
 	<!-- Video header background-->
-	<script src="js/bgVid.js"></script>
+	<script src="../js/bgVid.js"></script>
 	<!-- Nosso JS -->
-	<script src="js/Ara.js"></script>
+	<script src="../js/Ara.js"></script>
 </body>
 
 </html>

@@ -1,39 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!doctype html>
-<html>
+<jsp:include page="topoNav.jsp"></jsp:include>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="keywords" content="documentario, estudo, video, pesquisa, ciencia, universidade" />
-
-	<title>Ara.Document√°rios - pagina de administra√ß√£o</title>
-
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/bgVid.css" />
-
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-</head>
-
-
-<body>
 	<header>
-		<!-- Add header dps-->
+		<div class="jumbotron col-md-12 col-sm-12 bg-danger rounded-0">
+			<h2 class="display-4 container text-white">Painel de controle</h2>
+		</div>
 	</header>
-
-	<div class="jumbotron col-md-12 col-sm-12 bg-danger rounded-0">
-		<h2 class="display-4 container text-white">Painel de controle</h2>
-	</div>
-
 	<div class="container my-4 rounded">
 		<div class="row">
 	<!-- Inicio Side Menu-->
 			<div class="nav flex-column nav-pills col-2 menuAdmin" id="v-pills-tab" style="padding-right: 0px;" role="tablist">
 	 			<a class="nav-link text-dark active semSmooth" id="v-pills-dash-tab" data-toggle="pill" href="#v-pills-dash" role="tab" aria-controls="v-pills-dash" aria-expanded="true">Dashboard</a>
 	 			<a class="nav-link text-dark semSmooth" id="v-pills-perf-tab" data-toggle="pill" href="#v-pills-perf" role="tab" aria-controls="v-pills-perf" aria-expanded="true">Perfil</a>
-				<a class="nav-link text-dark semSmooth" id="v-pills-admUser-tab" data-toggle="pill" href="#v-pills-admUser" role="tab" aria-controls="v-pills-admUser" aria-expanded="true">Gerenciar usu√°rios</a>
-				<a class="nav-link text-dark semSmooth" id="v-pills-admDoc-tab" data-toggle="pill" href="#v-pills-admDoc" role="tab" aria-controls="v-pills-admDoc" aria-expanded="true">Gerenciar Document√°rios</a>
-	 			<a class="nav-link text-dark semSmooth" id="v-pills-newDoc-tab" data-toggle="pill" href="#v-pills-newDoc" role="tab" aria-controls="v-pills-newDoc" aria-expanded="true">Novo Document√°rio</a>
+				<a class="nav-link text-dark semSmooth" id="v-pills-admUser-tab" data-toggle="pill" href="#v-pills-admUser" role="tab" aria-controls="v-pills-admUser" aria-expanded="true">Gerenciar usu·rios</a>
+				<a class="nav-link text-dark semSmooth" id="v-pills-admDoc-tab" data-toggle="pill" href="#v-pills-admDoc" role="tab" aria-controls="v-pills-admDoc" aria-expanded="true">Gerenciar Document·rios</a>
+	 			<a class="nav-link text-dark semSmooth" id="v-pills-newDoc-tab" data-toggle="pill" href="#v-pills-newDoc" role="tab" aria-controls="v-pills-newDoc" aria-expanded="true">Novo Document·rio</a>
 				<hr class="separador">
 			</div>
 	<!-- fim Side menu-->
@@ -94,7 +74,7 @@
 
 				<!-- inicio -Gerenciador_de_usuario -->
 	  		<div class="tab-pane fade" id="v-pills-admUser" role="tabpanel" aria-labelledby="v-pills-admUser-tab">
-					<h1 class="display-4">Usu√°rios: </h1>
+					<h1 class="display-4">Usu·rios: </h1>
 					<hr class="separador">
 
 					<ul class="list-group boxAdmin">
@@ -137,13 +117,13 @@
 
 				<!-- Inicio -Gerenciador_de_Documentario -->
 				<div class="tab-pane fade" id="v-pills-admDoc" role="tabpanel" aria-labelledby="v-pills-admDoc-tab">
-					<h1 class="display-4">Document√°rios: </h1>
+					<h1 class="display-4">Document·rios: </h1>
 					<hr class="separador">
 
 					<div class="list-group boxAdmin">
   					<a class="list-group-item flex-column align-items-start">
     					<div class="d-flex w-100 justify-content-between">
-      					<h5 class="mb-1">Bolo de Lim√£o | Noriko Arai</h5>
+      					<h5 class="mb-1">Bolo de Lim„o | Noriko Arai</h5>
       					<small class="text-muted">3 days ago</small>
     					</div>
     					<p class="mb-1">Meet Todai Robot, an AI project that performed in the top 20 percent of students on the entrance exam for the University of Tokyo -- without actually understanding a thing. While it's not matriculating anytime soon</p>
@@ -182,12 +162,12 @@
 
 				<!-- Inicio -Novo_documentario -->
 	  		<div class="tab-pane fade" id="v-pills-newDoc" role="tabpanel" aria-labelledby="v-pills-newDoc-tab">
-					<h1 class="display-4">Novo document√°rio: </h1>
+					<h1 class="display-4">Novo document·rio: </h1>
 					<hr class="separador">
 					<form name="formNewDoc" id="formNewDoc" action="" method="post">
 						<!-- Inicio primeira linha -->
 						<div class="form-group">
-							<label for="nomeDoc">Nome do document√°rio*:</label>
+							<label for="nomeDoc">Nome do document·rio*:</label>
 							<input class="form-control form-control-lg" id="nomeDoc" name="nomeDoc" type="text" placeholder="TED talk etc">
 							<span id="erro_nomeDoc" class="erroFormDoc"></span>
 						</div>
@@ -218,7 +198,7 @@
 							<div class="form-group col-md-6 col-sm-6">
 								<label for="generoDoc">Genero*:</label>
 								<select class="form-control" name="generoDoc" id="generoDoc">
-									<option value="">Selecione uma op√ß√£o</option>
+									<option value="">Selecione uma opÁ„o</option>
 									<option value="ted_talk">Ted</option>
 									<option value="universo">Universo</option>
 									<option value="historia">Historia</option>
@@ -239,10 +219,10 @@
 							<div class="form-group col-md-6 col-sm-6">
 								<label for="idiomaDoc">idioma*:</label>
 								<select class="form-control" name="idiomaDoc" id="idiomaDoc">
-									<option value="">Selecione uma op√ß√£o</option>
+									<option value="">Selecione uma opÁ„o</option>
 									<option value="portugues">Portugues</option>
 									<option value="ingles">Ingles</option>
-									<option value="alemao">Alem√£o</option>
+									<option value="alemao">Alem„o</option>
 									<option value="frances">Frances</option>
 									<option value="japones">Japones</option>
 									<option value="russo">Russo</option>
@@ -253,7 +233,7 @@
 								<span id="elsePort" name="elsePort">
 									<label for="legDoc">Possui Legenda*:</label></br>
 									<label class="form-check-label"> <input class="form-check-input" type="radio" name="legDoc" id="legDoc" value="legendado" checked>Sim </label>
-									<label class="form-check-label"> <input class="form-check-input" type="radio" name="legDoc" id="legDoc" value="SEM_legenda" checked>N√£o </label>
+									<label class="form-check-label"> <input class="form-check-input" type="radio" name="legDoc" id="legDoc" value="SEM_legenda" checked>N„o </label>
 								</span>
 								<span id="erro_dubDoc" class="erroFormDoc"></span>
 							</div>
@@ -268,20 +248,20 @@
 						</div>
 						<!-- fim quinta linha-->
 
-						<!-- Inicio sexta e s√©tima linha-->
+						<!-- Inicio sexta e sÈtima linha-->
 						<div class="form-group">
 							<label for="thumbDoc">Thumbnail*:</label>
 							<input type="file" class="form-control-file" id="thumbDoc" name="thumbDoc">
 							<span id="erro_thumbDoc" class="erroFormDoc"></span>
 						</div>
 						<div class="form-group">
-							<label for="linkDoc">link do document√°rio*:</label>
+							<label for="linkDoc">link do document·rio*:</label>
 							<input type="text" class="form-control" id="linkDoc" name="linkDoc">
 							<span id="erro_linkDoc" class="erroFormDoc"></span>
 						</div>
-						<!-- fim sexta e s√©tima linha-->
+						<!-- fim sexta e sÈtima linha-->
 
-						<!-- Bot√µes-->
+						<!-- Botıes-->
 						<input type="submit" id="enviaDoc" value="Enviar" class="btn btn-danger"/>
 						<input type="button" class="btn btn-outline-secondary btlimpar" value="Limpar" />
 					</form>

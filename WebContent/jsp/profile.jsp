@@ -1,22 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!doctype html>
-<html>
+<jsp:include page="topoNav.jsp"></jsp:include>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="keywords" content="documentario, estudo, video, pesquisa, ciencia, universidade" />
-
-	<title>Ara.Documentários - pagina de administração</title>
-
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/bgVid.css" />
-
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-</head>
-
-
-<body>
 	<header>
 		<header>
 			<!--Nav top-->
@@ -31,7 +14,7 @@
 							<a class="nav-link" href="header">Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#catalogo">Catálogo</a>
+							<a class="nav-link" href="#catalogo">Cat�logo</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#sobreNos">Sobre</a>
@@ -47,7 +30,7 @@
 									Login
 								</button>
 								<div class="dropdown-menu dropdown-menu-right" style="padding: 15px; padding-bottom: 0px; width: 300px;">
-									<form action="[AÇAO]" method="post" accept-charset="UTF-8">
+									<form action="[A�AO]" method="post" accept-charset="UTF-8">
 										<label for="logEmail">Email</label>
 										<input type="email" class="form-control" id="logEmail" aria-describedby="emailHelp" placeholder="Digite seu email">
 
@@ -122,13 +105,13 @@
 
 				<!-- Inicio -Favoritos -->
 				<div class="tab-pane fade" id="v-pills-fav" role="tabpanel" aria-labelledby="v-pills-fav-tab">
-					<h1 class="display-4">Documentários: </h1>
+					<h1 class="display-4">Document�rios: </h1>
 					<hr class="separador">
 
 					<div class="list-group boxAdmin">
   					<a class="list-group-item flex-column align-items-start">
     					<div class="d-flex w-100 justify-content-between">
-      					<h5 class="mb-1">Bolo de Limão | Noriko Arai</h5>
+      					<h5 class="mb-1">Bolo de Lim�o | Noriko Arai</h5>
     					</div>
     					<p class="mb-1">Meet Todai Robot, an AI project that performed in the top 20 percent of students on the entrance exam for the University of Tokyo -- without actually understanding a thing. While it's not matriculating anytime soon</p>
 							<div class="adminOPT">

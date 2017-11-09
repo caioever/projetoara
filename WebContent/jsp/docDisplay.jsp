@@ -1,22 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!doctype html>
-<html>
+<jsp:include page="topoNav.jsp"></jsp:include>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="keywords" content="documentario, estudo, video, pesquisa, ciencia, universidade" />
-
-	<title>Ara.DocumentÃ¡rios</title>
-
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/bgVid.css" />
-
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-</head>
-
-
-<body>
 	<header>
 		<!--Nav top-->
 		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -30,7 +13,7 @@
 						<a class="nav-link" href="header">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#catalogo">CatÃ¡logo</a>
+						<a class="nav-link" href="#catalogo">Catálogo</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#sobreNos">Sobre</a>
@@ -46,7 +29,7 @@
 								Login
 							</button>
 							<div class="dropdown-menu dropdown-menu-right" style="padding: 15px; padding-bottom: 0px; width: 300px;">
-								<form action="[AÃ‡AO]" method="post" accept-charset="UTF-8">
+								<form action="[AÇAO]" method="post" accept-charset="UTF-8">
 									<label for="logEmail">Email</label>
 									<input type="email" class="form-control" id="logEmail" aria-describedby="emailHelp" placeholder="Digite seu email">
 
@@ -82,21 +65,21 @@
 	</div>
 </div>
 <div class="col-xs-10 col-sm-10 col-lg-3" style="margin-left: 5px">
-<h2></br></h2><h4>SinÃ³pse </h4><br>
+<h2></br></h2><h4>Sinópse </h4><br>
 <div>
 <p>
 Tardei, tardei, tardei
 Mas cheguei, enfim
-Pra cada adeus um nÃ³
-Cada conta, o fio do rosÃ¡rio que eu
+Pra cada adeus um nó
+Cada conta, o fio do rosário que eu
 Vim banhar, pra lhe dar
 
 Tardei, tardei, tardei
-SÃ³ na volta eu vi
+Só na volta eu vi
 Qual senda me levou
 Qual me trouxe aqui
-Pra encontrar vocÃª
-Onde estÃ¡, meu lugar?
+Pra encontrar você
+Onde está, meu lugar?
 
 Desceu pelo rio
 Da terra pro mar
@@ -106,8 +89,8 @@ Tardei, tardei, tardei
 Que na vinda eu quis
 Pela primeira vez
 Nunca mais partir
-E esperar vocÃª
-O meu lugar, onde estÃ¡?
+E esperar você
+O meu lugar, onde está?
 
 Desceu pelo rio
 Da terra pro mar
@@ -142,19 +125,19 @@ Um fio de prata que me leva</p>
 
 				<p class="rodape-links">
 					<a href="#">Home</a>
-					Â·
+					·
 					<a href="#">Blog</a>
-					Â·
+					·
 					<a href="#">Pricing</a>
-					Â·
+					·
 					<a href="#">About</a>
-					Â·
+					·
 					<a href="#">Faq</a>
-					Â·
+					·
 					<a href="#">Contact</a>
 				</p>
 
-				<p class="rodape-copy">DocumentÃ¡rios Ara &copy; 2017 - UVA</p>
+				<p class="rodape-copy">Documentários Ara &copy; 2017 - UVA</p>
 			</div>
 			<div class="rodape-meio">
 
@@ -177,7 +160,7 @@ Um fio de prata que me leva</p>
 			<div class="rodape-direita">
 
 				<p class="rodape-texto">
-					<span>Sobre nÃ³s</span>
+					<span>Sobre nós</span>
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
 				</p>
 

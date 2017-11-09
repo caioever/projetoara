@@ -1,10 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html>
 <html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="documentario, estudo, video, pesquisa, ciencia, universidade" />
+
+	<title>Ara.Documentários</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bgVid.css" />
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+
+
+<body>
 		<!--Nav top-->
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#"><object type="image/svg+xml" data="img/logoAraSmall.svg" width="30" height="30" class="d-inline-block align-top" alt=""></object> Ara.</a>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#"><object type="image/svg+xml" data="../img/logoAraSmall.svg" width="30" height="30" class="d-inline-block align-top" alt=""></object> Ara.</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topBar" aria-controls="topBar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -55,5 +70,3 @@
 			</div>
 		</nav>
 		<!--Fim Nav top-->
-
-</html>

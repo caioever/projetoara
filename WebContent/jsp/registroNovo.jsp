@@ -1,29 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!doctype html>
-<html>
+<jsp:include page="topoNav.jsp"></jsp:include>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="keywords" content="documentario, estudo, video, pesquisa, ciencia, universidade" />
-
-	<title>Ara.DocumentÃ¡rios - pagina de administraÃ§Ã£o</title>
-
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/bgVid.css" />
-
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-</head>
-
-
-<body>
 	<div class="jumbotron col-md-12 col-sm-12 bg-danger rounded-0">
-		<h2 class="display-4 container text-white">Cadastro de UsuÃ¡rio</h2>
+		<h2 class="display-4 container text-white">Cadastro de Usuário</h2>
 	</div>
 
 	<form name="formCadastro" id="formCadastro" onsubmit="return validarUsuario(this)">
 		<fieldset class="container my-4">
-			<legend class="control-label"> Dados do UsuÃ¡rio </legend>
+			<legend class="control-label"> Dados do Usuário </legend>
 
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
@@ -82,14 +65,14 @@
 
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
-					<label for="preferencia">LÃ­ngua de PreferÃªncia: </label>
+					<label for="preferencia">Língua de Preferência: </label>
 					<select class="form-control" name="preferencia" id="preferencia">
-						<option value="">Selecione uma opÃ§Ã£o</option>
-						<option value="portugues">PortuguÃªs</option>
-						<option value="ingles">InglÃªs</option>
-						<option value="frances">FrancÃªs</option>
-						<option value="alemao">AlemÃ£o</option>
-						<option value="semPreferencia">Sem PreferÃªncia</option>
+						<option value="">Selecione uma opção</option>
+						<option value="portugues">Português</option>
+						<option value="ingles">Inglês</option>
+						<option value="frances">Francês</option>
+						<option value="alemao">Alemão</option>
+						<option value="semPreferencia">Sem Preferência</option>
 					</select>
 				</div>
 			</div>
