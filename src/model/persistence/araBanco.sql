@@ -10,6 +10,8 @@ nome varchar(20) not null,
 sobrenome varchar(20) not null,
 senha varchar(20) not null,
 email varchar(50) not null primary key,
+tipoConta int(2) not null,
+pathImgPerf varchar(30) not null,
 sexo enum ( 'M' , 'F' ) not null,
 telefone varchar(15) not null,
 dataNascimento date not null
