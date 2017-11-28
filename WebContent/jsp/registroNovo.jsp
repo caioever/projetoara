@@ -1,23 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <jsp:include page="topoNav.jsp"></jsp:include>
 
 <!-- ************************ JSTL -tela de consulta***************** -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> <!-- Não usado -->
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> <!-- Não usado -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> <!-- NÃ£o usado -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> <!-- NÃ£o usado -->
 <!-- **************************************************************** -->
 
 <c:set var="url" value="cadastro_novo.html" />
 
 
 	<div class="jumbotron col-md-12 col-sm-12 bg-danger rounded-0">
-		<h2 class="display-4 container text-white">Cadastro de Usuário</h2>
+		<h2 class="display-4 container text-white">Cadastro de UsuÃ¡rio</h2>
 	</div>
+	
 	<div id="mensagens">
 		${msg} <!-- INSERIDO NA AULA DE BACKEND -->	
 	</div>
+	
 	<form name="formCadastro" id="formCadastro" role="form" action="${url}" method="post">
 		<fieldset class="container my-4">
-			<legend class="control-label"> Dados do Usuário </legend>
+			<legend class="control-label"> Dados do UsuÃ¡rio </legend>
 
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
@@ -76,14 +80,14 @@
 
 			<div class="row">
 				<div class="form-group col-md-6 col-sm-6">
-					<label for="preferencia">Língua de Preferência: </label>
+					<label for="preferencia">LÃ­ngua de PreferÃªncia: </label>
 					<select class="form-control" name="preferencia" id="preferencia">
-						<option value="">Selecione uma opção</option>
-						<option value="portugues">Português</option>
-						<option value="ingles">Inglês</option>
-						<option value="frances">Francês</option>
-						<option value="alemao">Alemão</option>
-						<option value="semPreferencia">Sem Preferência</option>
+						<option value="">Selecione uma opÃ§Ã£o</option>
+						<option value="portugues">PortuguÃªs</option>
+						<option value="ingles">InglÃªs</option>
+						<option value="frances">FrancÃªs</option>
+						<option value="alemao">AlemÃ£o</option>
+						<option value="semPreferencia">Sem PreferÃªncia</option>
 					</select>
 				</div>
 			</div>

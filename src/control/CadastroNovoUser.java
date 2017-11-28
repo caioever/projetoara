@@ -9,9 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.entity.Cliente;
 import model.entity.Usuario;
-import model.persistence.ClienteDao;
 import model.persistence.NewUserDao;
 import model.persistence.UtilsBanco;
 
@@ -43,8 +41,6 @@ public class CadastroNovoUser extends HttpServlet {
 
 			if(url.equalsIgnoreCase("/jsp/cadastro_novo.html")){
 				cadNewUser(request, response);
-			}else if(url.equalsIgnoreCase("/jsp/profile.html")){
-				perfil(request, response);
 			}else{
 				response.sendRedirect("/");
 			}
@@ -110,27 +106,5 @@ public class CadastroNovoUser extends HttpServlet {
 		
 	}
 	//fim cadastro
-	
-	//perfilGet
-	protected void perfil(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		try{
-			/* Pegar o cpf digitado na tela */			
-			String id = new String(request.getParameter("id"));
-			/* Instanciar a classe DaoCliente */
-			NewUserDao banco = new NewUserDao();
-			/* Acionar o método da classe Dao Cliente que retorna os dados de um cliente a 
-			 * partir do CPF do cliente*/
-			Usuario usuario = banco.getPerfil(id);
-		
-			request.setAttribute("UserName", usuario.getNome());
-			request.setAttribute("sex", usuario.getSexo());
-			request.setAttribute("UserTipe", usuario.getTipoConta());
-			request.setAttribute("UserEmail", usuario.getEmail());
-			request.getRequestDispatcher("profile.jsp").forward(request, response);
-			
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-	}
 
 }

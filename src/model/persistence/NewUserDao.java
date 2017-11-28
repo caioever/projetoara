@@ -3,7 +3,6 @@ package model.persistence;
 import java.sql.SQLException;
 import java.util.GregorianCalendar;
 
-import model.entity.Cliente;
 import model.entity.Usuario;
 
 public class NewUserDao extends Dao{
