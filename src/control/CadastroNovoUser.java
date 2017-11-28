@@ -13,7 +13,7 @@ import model.entity.Usuario;
 import model.persistence.NewUserDao;
 import model.persistence.UtilsBanco;
 
-@WebServlet({"/NovoUsuário", "/jsp/cadastrarNovo.html"})
+@WebServlet({"/CadastroNovoUser", "/jsp/cadastrarNovo.html"})
 
 public class CadastroNovoUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -61,14 +61,14 @@ public class CadastroNovoUser extends HttpServlet {
 			String senha = request.getParameter("senha");
 			String email = request.getParameter("email");
 			
-			/* String tipoConta */0 = request.getParameter("tipoConta");
-			/* String pathImgPerf */"holder.js/40x40" = request.getParameter("pathImgPerf");
+			int tipoConta = 0; //request.getParameter("tipoConta");
+			String pathImgPerf =  "holder.js/40x40"; //request.getParameter("pathImgPerf");
 			
 			String sexo = request.getParameter("rbsexo");
 			String telefone = request.getParameter("telefone");
 			String dtNasc = request.getParameter("dtnasc");
 			
-			/*String lingPref*/"Portugues" = request.getParameter("lingPref");
+			String lingPref = "Portugues"; //request.getParameter("lingPref");
 			
 			Usuario usuario = new Usuario();
 			
@@ -78,14 +78,14 @@ public class CadastroNovoUser extends HttpServlet {
 			usuario.setEmail(email);
 			usuario.setSenha(senha);
 			
-			//usuario.setTipoConta(tipoConta);
-			//usuario.setPathImgPerf(pathImgPerf);
+			usuario.setTipoConta(tipoConta);
+			usuario.setPathImgPerf(pathImgPerf);
 			
 			usuario.setSexo(sexo);
 			usuario.setTelefone(telefone);
 			usuario.setDtNasc(UtilsBanco.converterData(dtNasc));
 			
-			//usuario.setLingPref(lingPref);
+			usuario.setLingPref(lingPref);
 
 			
 			if(new NewUserDao().cadastrar(usuario)){

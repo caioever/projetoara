@@ -37,7 +37,7 @@ public class Usuario {
 	@Override
 	public String toString() {
 		return "Usuario [nome = " + nome + ", sobrenome = " + sobrenome + ", email = " + email + ", tipoConta = " + tipoConta
-				+ ", pathImgPerf = " + pathImgPerf + ", sexo = " + sexo + ", telefone = " + telefone + ", dtNasc=" + dtNasc + 
+				+ ", pathImgPerf = " + pathImgPerf + ", sexo = " + sexo + ", telefone = " + telefone + ", dtNasc=" + dtNasc 
 				+ ", Lingua de preferencia = " + lingPref + "]";
 	}
 	
