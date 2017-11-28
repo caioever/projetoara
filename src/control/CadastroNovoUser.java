@@ -13,7 +13,7 @@ import model.entity.Usuario;
 import model.persistence.NewUserDao;
 import model.persistence.UtilsBanco;
 
-@WebServlet({"/NovoUsuário", "/jsp/cadastro_novo.html"})
+@WebServlet({"/NovoUsuário", "/jsp/cadastrarNovo.html"})
 
 public class CadastroNovoUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -39,7 +39,7 @@ public class CadastroNovoUser extends HttpServlet {
 			//Pegar a URL que foi executada
 			String url = request.getServletPath();
 
-			if(url.equalsIgnoreCase("/jsp/cadastro_novo.html")){
+			if(url.equalsIgnoreCase("/jsp/cadastrarNovo.html")){
 				cadNewUser(request, response);
 			}else{
 				response.sendRedirect("/");

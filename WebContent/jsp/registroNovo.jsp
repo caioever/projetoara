@@ -8,7 +8,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> <!-- Não usado -->
 <!-- **************************************************************** -->
 
-<c:set var="url" value="cadastro_novo.html" />
+<c:set var="url" value="cadastrarNovo.html" />
 
 
 	<div class="jumbotron col-md-12 col-sm-12 bg-danger rounded-0">
