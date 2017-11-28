@@ -41,6 +41,7 @@ public class CadastroNovoUser extends HttpServlet {
 
 			if(url.equalsIgnoreCase("/jsp/cadastrarNovo.html")){
 				cadNewUser(request, response);
+				System.out.println("Chegou aqui");
 			}else{
 				response.sendRedirect("/");
 			}
@@ -48,6 +49,7 @@ public class CadastroNovoUser extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
+	
 	//cadastro de usuário
 	protected void cadNewUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
