@@ -17,7 +17,7 @@ public class Dao {
 	//URL de conexao com o banco
 	private final String URL = "jdbc:mysql://localhost:3306/projetoara";
 	private final String USER = "root";//usuario do banco de dados
-	private final String PASS = "050181";//Senha do banco
+	private final String PASS = "local@4553213";//Senha do banco
 	
 	protected void open()throws Exception{
 		//Carregar o Driver de conexao com o mysql

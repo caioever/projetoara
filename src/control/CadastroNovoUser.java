@@ -12,15 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 import model.entity.Cliente;
 import model.entity.Usuario;
 import model.persistence.ClienteDao;
-import model.persistence.UserDao;
+import model.persistence.NewUserDao;
 import model.persistence.UtilsBanco;
 
 @WebServlet({"/NovoUsuário", "/jsp/cadastro_novo.html"})
 
-public class ControleUser extends HttpServlet {
+public class CadastroNovoUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-    public ControleUser() {
+    public CadastroNovoUser() {
         super();
     }
     
@@ -59,30 +59,38 @@ public class ControleUser extends HttpServlet {
 			/* Resgatar os dados do formulario: formCliente*/
 			String nome = request.getParameter("nome");
 			String sobrenome = request.getParameter("sobrenome");
-			String sexo = request.getParameter("rbsexo");
-			// String tipoConta = request.getParameter("tipoConta");
-			String pathImgPerf = request.getParameter("pathImgPerf");
-			String dtNasc = request.getParameter("dtnasc");
-			String telefone = request.getParameter("telefone");
-			String lingPref = request.getParameter("lingPref");
-			String email = request.getParameter("email");
+			
 			String senha = request.getParameter("senha");
+			String email = request.getParameter("email");
+			
+			/* String tipoConta */0 = request.getParameter("tipoConta");
+			/* String pathImgPerf */"holder.js/40x40" = request.getParameter("pathImgPerf");
+			
+			String sexo = request.getParameter("rbsexo");
+			String telefone = request.getParameter("telefone");
+			String dtNasc = request.getParameter("dtnasc");
+			
+			/*String lingPref*/"Portugues" = request.getParameter("lingPref");
 			
 			Usuario usuario = new Usuario();
 			
-			/* Hospedar os dados do Cliente na Bean Cliente*/
+			/* Hospedar os dados do Usuario na Bean Usuario*/
 			usuario.setNome(nome);
 			usuario.setSobrenome(sobrenome);
-			usuario.setSexo(sexo);
-			// usuario.setTipoConta(tipoConta);
-			usuario.setPathImgPerf(pathImgPerf);
-			usuario.setDtNasc(UtilsBanco.converterData(dtNasc));
-			usuario.setTelefone(telefone);
-			usuario.setLingPref(lingPref);
 			usuario.setEmail(email);
 			usuario.setSenha(senha);
 			
-			if(new UserDao().cadastrar(usuario)){
+			//usuario.setTipoConta(tipoConta);
+			//usuario.setPathImgPerf(pathImgPerf);
+			
+			usuario.setSexo(sexo);
+			usuario.setTelefone(telefone);
+			usuario.setDtNasc(UtilsBanco.converterData(dtNasc));
+			
+			//usuario.setLingPref(lingPref);
+
+			
+			if(new NewUserDao().cadastrar(usuario)){
 				/*setar a mensagem de sucesso no request*/
 				request.setAttribute("msg", 
 				"<div class='alert alert-success'>Usuário cadastrado com sucesso</div>");
@@ -109,7 +117,7 @@ public class ControleUser extends HttpServlet {
 			/* Pegar o cpf digitado na tela */			
 			String id = new String(request.getParameter("id"));
 			/* Instanciar a classe DaoCliente */
-			UserDao banco = new UserDao();
+			NewUserDao banco = new NewUserDao();
 			/* Acionar o método da classe Dao Cliente que retorna os dados de um cliente a 
 			 * partir do CPF do cliente*/
 			Usuario usuario = banco.getPerfil(id);

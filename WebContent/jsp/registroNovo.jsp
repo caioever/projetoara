@@ -1,12 +1,21 @@
 <jsp:include page="topoNav.jsp"></jsp:include>
 
+<!-- ************************ JSTL -tela de consulta***************** -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> <!-- Não usado -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> <!-- Não usado -->
+<!-- **************************************************************** -->
+
+<c:set var="url" value="cadastro_novo.html" />
+
+
 	<div class="jumbotron col-md-12 col-sm-12 bg-danger rounded-0">
 		<h2 class="display-4 container text-white">Cadastro de Usuário</h2>
 	</div>
 	<div id="mensagens">
 		${msg} <!-- INSERIDO NA AULA DE BACKEND -->	
 	</div>
-	<form name="formCadastro" id="formCadastro" onsubmit="return validarUsuario(this)">
+	<form name="formCadastro" id="formCadastro" role="form" action="${url}" method="post">
 		<fieldset class="container my-4">
 			<legend class="control-label"> Dados do Usuário </legend>
 
@@ -44,10 +53,10 @@
 					<label for="sexo">Sexo*:</label>
 					<div class="form-check form-check">
 						<label class="form-check-label">
-							<input class="form-check-input" type="radio" class="form-control" name="rbsexo" value="S" checked="checked" />Masculino
+							<input class="form-check-input" type="radio" class="form-control" name="rbsexo" value="M" checked="checked" />Masculino
 						</label>
 						<label class="form-check-label">
-							<input class="form-check-input" type="radio" class="form-control" name="rbsexo" value="N" />Feminino
+							<input class="form-check-input" type="radio" class="form-control" name="rbsexo" value="F" />Feminino
 						</label>
 					</div>
 				</div>

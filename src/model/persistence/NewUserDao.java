@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 import model.entity.Cliente;
 import model.entity.Usuario;
 
-public class UserDao extends Dao{
+public class NewUserDao extends Dao{
 
 	/* Incluir o Cliente */	
 	public boolean cadastrar(Usuario c) throws Exception{
@@ -17,31 +17,20 @@ public class UserDao extends Dao{
 		
 				/* Retirar o auto commit */
 				con.setAutoCommit(false);
-		
-				/* Inserir uma parte dos dados na Tabela USUARIO*/
-				stmt = con.prepareStatement("insert into usuario values(?,?,?,?,?)");
-				stmt.setString(1, c.getEmail());
-				stmt.setString(2, c.getNome());
-				stmt.setString(3, c.getSenha());
-				stmt.setString(4,"CLI");
-				/* Data do Cadastramento no Sistema */
-				String dataCadastro = UtilsBanco.getDataHoraCorrente(); 
-				stmt.setString(5,dataCadastro);
-					
-				stmt.execute();
-				success = true;
 				
-				/* Inserir a outra parte dos dados na Tabela CLIENTE*/
-				stmt = con.prepareStatement("insert into cliente values(?,?,?,?,?,?,?)");
+				/* Inserir a outra parte dos dados na Tabela USUARIO*/
+				stmt = con.prepareStatement("insert into usuario values(?,?,?,?,?,?,?,?,?)");
 				
-				stmt.setString(1,c.getSobrenome());
-				stmt.setString(2, c.getEmail());
+				stmt.setString(1,c.getNome());
+				stmt.setString(2,c.getSobrenome());
+				stmt.setString(3,c.getSenha());
+				stmt.setString(4, c.getEmail());
+				stmt.setInt(5, c.getTipoConta());
+				stmt.setString(6, c.getPathImgPerf());	
 				//String data = UtilsBanco.ConverterDataToBanco(c.getDtNasc());
-				stmt.setString(3,UtilsBanco.converterDataToBanco(c.getDtNasc()));
-				stmt.setString(4, c.getSexo());
-				stmt.setString(5, c.getTelefone());
-				stmt.setString(6, c.getLingPref());
-				stmt.setString(7, c.getPathImgPerf());	
+				stmt.setString(7, c.getSexo());
+				stmt.setString(8, c.getTelefone());
+				stmt.setString(9,UtilsBanco.converterDataToBanco(c.getDtNasc()));
 				stmt.execute();
 				success = true;
 				con.commit();

@@ -3,17 +3,16 @@ package model.entity;
 import java.util.GregorianCalendar;
 
 public class Usuario {
-	private String id;
 	private String nome;
 	private String sobrenome;
-	private String sexo;
+	private String senha;
+	private String email;
 	private Integer tipoConta;
 	private String pathImgPerf;
-	private GregorianCalendar dtNasc;
+	private String sexo;
 	private String telefone;
+	private GregorianCalendar dtNasc;
 	private String lingPref;
-	private String email;
-	private String senha;
 	
 	/*Construtor Vazio*/	
 	public Usuario() {
@@ -21,25 +20,25 @@ public class Usuario {
 	}
 
 	/*Construtor Cheio*/
-	public Usuario(String nome, String sobrenome, String sexo, Integer tipoConta, String pathImgPerf, GregorianCalendar dtNasc, String telefone, String lingPref, String email, String senha) {
+	public Usuario(String nome, String sobrenome, String senha, String email, Integer tipoConta, String pathImgPerf, String sexo, String telefone, GregorianCalendar dtNasc, String lingPref) {
 		super();
 		this.nome = nome;
 		this.sobrenome = sobrenome;
-		this.sexo = sexo;
+		this.senha = senha;
+		this.email = email;
 		this.tipoConta = tipoConta;
 		this.pathImgPerf = pathImgPerf;
-		this.dtNasc = dtNasc;
+		this.sexo = sexo;
 		this.telefone = telefone;
+		this.dtNasc = dtNasc;
 		this.lingPref = lingPref;
-		this.email = email;
-		this.senha = senha;
 	}
 	
 	@Override
 	public String toString() {
-		return "Usuario [nome=" + nome + ", sobrenome=" + sobrenome + ", sexo=" + sexo + ", tipoConta=" + tipoConta
-				+ ", pathImgPerf=" + pathImgPerf + ", dtNasc=" + dtNasc + ", telefone=" + telefone + ", lingPref="
-				+ lingPref + ", email=" + email + ", senha=" + senha + "]";
+		return "Usuario [nome = " + nome + ", sobrenome = " + sobrenome + ", email = " + email + ", tipoConta = " + tipoConta
+				+ ", pathImgPerf = " + pathImgPerf + ", sexo = " + sexo + ", telefone = " + telefone + ", dtNasc=" + dtNasc + 
+				+ ", Lingua de preferencia = " + lingPref + "]";
 	}
 	
 
