@@ -15,7 +15,7 @@ public class Dao {
 	ResultSet rs;
 
 	//URL de conexao com o banco
-	private final String URL = "jdbc:mysql://localhost:3306/projetoara";
+	private final String URL = "jdbc:mysql://127.0.0.1:3306/projetoara";
 	private final String USER = "root";//usuario do banco de dados
 	private final String PASS = "local@4553213";//Senha do banco
 	

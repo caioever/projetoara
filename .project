@@ -3,6 +3,10 @@
 	<name>projetoara</name>
 	<comment></comment>
 	<projects>
+		<project>jstl</project>
+		<project>mysql-connector-java-5.1.23-bin</project>
+		<project>servlet3-api</project>
+		<project>standard</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -83,7 +83,7 @@ public class CadastroNovoUser extends HttpServlet {
 			
 			usuario.setSexo(sexo);
 			usuario.setTelefone(telefone);
-			usuario.setDtNasc(UtilsBanco.converterData(dtNasc));
+			//usuario.setDtNasc(UtilsBanco.converterData(dtNasc));
 			
 			usuario.setLingPref(lingPref);
 

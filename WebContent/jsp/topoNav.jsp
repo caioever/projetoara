@@ -29,7 +29,9 @@
 						<a class="nav-link" href="#header">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#catalogo">Catálogo</a>
+						<form id="catalogo" name="catalogo" action="CatalogoCompleto.html" method="get">
+							<a class="nav-link" href="#" onClick="document.getElementById('catalogo').submit();">Catálogo</a>
+						</form>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#sobreNos">Sobre</a>

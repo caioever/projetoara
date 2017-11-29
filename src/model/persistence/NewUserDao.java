@@ -64,9 +64,9 @@ public class NewUserDao extends Dao{
 			rs = stmt.executeQuery();
 			if(rs.next()){
 				
-				usuario = new Usuario(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("sexo"), rs.getInt("tipoConta"),
-						rs.getString("pathImgPerf"), UtilsBanco.converterDataBancoToGC(rs.getString("dtNasc")), rs.getString("telefone"), rs.getString("lingPref"),
-						rs.getString("email"), rs.getString("senha"));	
+				usuario = new Usuario(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("senha"), rs.getString("email"), rs.getInt("tipoConta"),
+						rs.getString("pathImgPerf"),rs.getString("sexo"), rs.getString("telefone"), UtilsBanco.converterDataBancoToGC(rs.getString("dtNasc")),
+						rs.getString("lingPref"));	
 			}
 		}catch(SQLException e){
 			e.printStackTrace();

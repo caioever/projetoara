@@ -15,7 +15,7 @@
 		<h2 class="display-4 container text-white">Cadastro de Usuário</h2>
 	</div>
 	
-	<div id="mensagens">
+	<div class="container" id="mensagens">
 		${msg} <!-- INSERIDO NA AULA DE BACKEND -->	
 	</div>
 	
