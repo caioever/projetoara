@@ -8,9 +8,9 @@ import model.entity.Documentario;
 
 public class DocumentarioDao extends Dao{
 	
-	/* Add Documentário */
-	/* Exibir Documentário*/
-	/* Editar Documentário */
+	/* Add Documentï¿½rio */
+	/* Exibir Documentï¿½rio*/
+	/* Editar Documentï¿½rio */
 	/* Catalogo Completo */
 	public List<Documentario> catalogoFull() throws Exception {
 		List<Documentario> catalogoFull = null;
@@ -26,9 +26,9 @@ public class DocumentarioDao extends Dao{
 				
 				doc.setCodigo(rs.getInt("codigo"));
 				doc.setNome(rs.getString("nome"));
-				doc.getDescricao(rs.getString("descricao"));
-				doc.getDiretor(rs.getString("diretor"));
-				doc.getAno(rs.getInt("ano"));
+				doc.setDescricao(rs.getString("descricao"));
+				doc.setDiretor(rs.getString("diretor"));
+				doc.setAno(rs.getInt("ano"));
 			}
 		}
 		catch(SQLException e ) {
