@@ -8,9 +8,9 @@ import model.entity.Documentario;
 
 public class DocumentarioDao extends Dao{
 	
-	/* Add Document�rio */
-	/* Exibir Document�rio*/
-	/* Editar Document�rio */
+	/* Add Documentário */
+	/* Exibir Documentário*/
+	/* Editar Documentário */
 	/* Catalogo Completo */
 	public List<Documentario> catalogoFull() throws Exception {
 		List<Documentario> catalogoFull = null;
