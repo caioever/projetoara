@@ -17,7 +17,7 @@ public class DocumentarioDao extends Dao{
 		try {
 			open();
 			
-			stmt = con.prepareStatement ("SELECT documentarios.codigo, documentarios.nome, documentarios.descricao, documentarios.diretor, documentarios.ano");
+			stmt = con.prepareStatement ("SELECT * FROM projetoara.documentarios");
 			rs = stmt.executeQuery();
 			
 			catalogoFull = new ArrayList<>();
