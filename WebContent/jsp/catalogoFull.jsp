@@ -13,10 +13,6 @@
 	<!-- Inicio Catalogo container-->
 	<div class="container my-4">
 		
-						<form id="catalogo" name="catalogo" action="CatalogoCompleto.html" method="get">
-							<input type="submit" value="PESQUISAR" class="btn btn-info">
-						</form>
-		
 		${msg}
 
 		<div class="row"> <!-- Inicio da row -->

@@ -4,7 +4,7 @@ create database projetoara;
 
 use projetoara;
 
-create table Usuarios
+create table usuarios
 (
 nome varchar(20) not null,
 sobrenome varchar(20) not null,
@@ -20,7 +20,7 @@ desc Usuarios;
 
 
 
-create table Documentarios
+create table documentarios
 (
 codigo int not null primary key,
 nome varchar(40) not null,
