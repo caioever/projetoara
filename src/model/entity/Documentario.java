@@ -1,8 +1,8 @@
 package model.entity;
 
 public class Documentario {
-	//Lucas: Todas as referências aos códigos foram comentadas, pois não temos um método para gera-los ainda.
-	//private int codigo;
+	//Lucas: Todas as referï¿½ncias aos cï¿½digos foram comentadas, pois nï¿½o temos um mï¿½todo para gera-los ainda.
+	private int codigo;
 	private String nome;
 	private String descricao;
 	private String diretor;
@@ -12,16 +12,16 @@ public class Documentario {
 	private String estudio;
 	private String thumbnail;
 	/* Construtores */
-	
+
 	//Contrutor Vazio
 	public Documentario() {
 		super();
 	}
-	
+
 	//Contrutor Cheio
 	public Documentario(int codigo, String nome, String descricao, String diretor, String ano, String idioma, String genero, String estudio, String thumbnail) {
 		super();
-		//this.codigo = codigo;
+		this.codigo = codigo;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.diretor = diretor;
@@ -31,20 +31,20 @@ public class Documentario {
 		this.estudio=estudio;
 		this.setThumbnail(thumbnail);
 	}
-	
+
 	//To String
 	@Override
 	public String toString() {
-		return /*"Codigo: " + codigo +*/ "\n" +
+		return "Codigo: " + codigo + "\n" +
 				"Nome: " + nome + "\n" +
 				"Diretor: " + diretor + "  Ano: " + ano + "\n" +
 				"\nDescriÃ§Ã£o: \n" + descricao;
 	}
-	
+
 	/* Gets */
-	/*public int getCodigo() {
+	public int getCodigo() {
 		return codigo;
-	}*/
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -57,11 +57,11 @@ public class Documentario {
 	public String getAno() {
 		return ano;
 	}
-	
+
 	/* Sets */
-	/*public void setCodigo(int codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
-	}*/
+	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}

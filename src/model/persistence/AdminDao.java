@@ -6,12 +6,12 @@ import model.entity.Documentario;
 
 public class AdminDao extends Dao{
 
-	
-	
-	
+
+
+
 	public boolean cadastrarDocumentario(Documentario doc) throws Exception{
 		boolean success = false;
-		
+
 		try {
 			open();
 			con.setAutoCommit(false);
@@ -29,19 +29,19 @@ public class AdminDao extends Dao{
 			con.commit();
 		}catch(SQLException e1){
 			if (con != null){
-				try { 
-					System.out.println("Rollback efetuado na transação");
+				try {
+					System.out.println("Rollback efetuado na transaÃ§Ã£o");
 					con.rollback();
 					success = false;
 					System.out.println("Erro!"+e1);
 				} catch(SQLException e2) {
-					System.err.print("Erro na transação!"+e2); 
-				} 
+					System.err.print("Erro na transaÃ§Ã£o!"+e2); 
+				}
 			}
 		}finally{
 			close();}
-		
+
 		return success;
 		}
-	
+
 }

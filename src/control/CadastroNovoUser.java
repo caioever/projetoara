@@ -17,23 +17,23 @@ import model.persistence.UtilsBanco;
 
 public class CadastroNovoUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
     public CadastroNovoUser() {
         super();
     }
-    
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		execute(request, response);
 	}
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		execute(request, response);
 	}
-	
-    /*Método criado em sala  - direcionar a requisição para o método adequado*/
+
+    /*Mï¿½todo criado em sala  - direcionar a requisicao para o mootodo adequado*/
 	protected void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try{
 			//Pegar a URL que foi executada
@@ -49,63 +49,63 @@ public class CadastroNovoUser extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-	
-	//cadastro de usuário
+
+	//cadastro de usuï¿½rio
 	protected void cadNewUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		try{
 			/* Resgatar os dados do formulario: formCliente*/
 			String nome = request.getParameter("nome");
 			String sobrenome = request.getParameter("sobrenome");
-			
+
 			String senha = request.getParameter("senha");
 			String email = request.getParameter("email");
-			
+
 			int tipoConta = 0; //request.getParameter("tipoConta");
 			String pathImgPerf =  "holder.js/40x40"; //request.getParameter("pathImgPerf");
-			
+
 			String sexo = request.getParameter("rbsexo");
 			String telefone = request.getParameter("telefone");
 			String dtNasc = request.getParameter("dtnasc");
-			
+
 			String lingPref = "Portugues"; //request.getParameter("lingPref");
-			
+
 			Usuario usuario = new Usuario();
-			
+
 			/* Hospedar os dados do Usuario na Bean Usuario*/
 			usuario.setNome(nome);
 			usuario.setSobrenome(sobrenome);
 			usuario.setEmail(email);
 			usuario.setSenha(senha);
-			
+
 			usuario.setTipoConta(tipoConta);
 			usuario.setPathImgPerf(pathImgPerf);
-			
+
 			usuario.setSexo(sexo);
 			usuario.setTelefone(telefone);
 			//usuario.setDtNasc(UtilsBanco.converterData(dtNasc));
-			
+
 			usuario.setLingPref(lingPref);
 
-			
+
 			if(new NewUserDao().cadastrar(usuario)){
 				/*setar a mensagem de sucesso no request*/
-				request.setAttribute("msg", 
-				"<div class='alert alert-success'>Usuário cadastrado com sucesso</div>");
+				request.setAttribute("msg",
+				"<div class='alert alert-success'>Usuï¿½rio cadastrado com sucesso</div>");
 			}else{
 				/*setar a mensagem de erro no request*/
-				request.setAttribute("msg", 
-				"<div class='alert alert-danger'>Usuário já possui possui um cadastro no sistema</div>");
+				request.setAttribute("msg",
+				"<div class='alert alert-danger'>Usuï¿½rio jï¿½ possui possui um cadastro no sistema</div>");
 			}
 		}catch(Exception e){
 			e.printStackTrace();
 			/*setar a mensagem de erro no request*/
-			request.setAttribute("msg", 
-					"<div class='alert alert-danger'>Usuário não cadastrado</div>");
+			request.setAttribute("msg",
+					"<div class='alert alert-danger'>Usuï¿½rio nï¿½o cadastrado</div>");
 		}finally{
 			request.getRequestDispatcher("registroNovo.jsp").forward(request, response);
 		}
-		
+
 	}
 	//fim cadastro
 
