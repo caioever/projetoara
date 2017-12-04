@@ -28,7 +28,7 @@ public class DocumentarioDao extends Dao{
 				doc.setNome(rs.getString("nome"));
 				doc.setDescricao(rs.getString("descricao"));
 				doc.setDiretor(rs.getString("diretor"));
-				doc.setAno(rs.getInt("ano"));
+				doc.setAno(rs.getInt("ano")); //corrigir esta linha
 			}
 		}
 		catch(SQLException e ) {
