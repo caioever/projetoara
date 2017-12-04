@@ -33,7 +33,7 @@ public class CadastroNovoUser extends HttpServlet {
 		execute(request, response);
 	}
 
-    /*M�todo criado em sala  - direcionar a requisicao para o mootodo adequado*/
+    /*Metodo criado em sala  - direcionar a requisicao para o mootodo adequado*/
 	protected void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try{
 			//Pegar a URL que foi executada
