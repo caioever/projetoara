@@ -8,16 +8,16 @@ import model.entity.Documentario;
 
 public class DocumentarioDao extends Dao{
 	
-	/* Add Document�rio */
-	/* Exibir Document�rio*/
-	/* Editar Document�rio */
+	/* Add Documentário */
+	/* Exibir Documentário*/
+	/* Editar Documentário */
 	/* Catalogo Completo */
 	public List<Documentario> catalogoFull() throws Exception {
 		List<Documentario> catalogoFull = null;
 		try {
 			open();
 			
-			stmt = con.prepareStatement ("SELECT documentarios.codigo, documentarios.nome, documentarios.descricao, documentarios.diretor, documentarios.ano");
+			stmt = con.prepareStatement ("SELECT * FROM projetoara.documentarios");
 			rs = stmt.executeQuery();
 			
 			catalogoFull = new ArrayList<>();

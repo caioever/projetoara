@@ -38,7 +38,7 @@ public class Documentario {
 		return /*"Codigo: " + codigo +*/ "\n" +
 				"Nome: " + nome + "\n" +
 				"Diretor: " + diretor + "  Ano: " + ano + "\n" +
-				"\nDescrição: \n" + descricao;
+				"\nDescriÃ§Ã£o: \n" + descricao;
 	}
 	
 	/* Gets */
