@@ -165,7 +165,7 @@
 						<!-- Inicio terceira linha-->
 						<div class="form-row">
 							<div class="form-group col-md-6 col-sm-6">
-								<label for="dateDoc">Data*:</label>
+								<label for="dateDoc">Ano*:</label>
 								<input type="date" class="form-control" id="dateDoc" name="dateDoc">
 								<span id="erro_dateDoc" class="erroFormDoc"></span>
 							</div>

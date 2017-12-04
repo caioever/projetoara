@@ -45,6 +45,7 @@ public class ControleDocumentario extends HttpServlet {
 				System.out.println("teste2");
 			}
 		}catch(Exception e) {
+			System.out.println("AAAAAA");
 			e.printStackTrace();
 		}
 	}
