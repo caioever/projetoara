@@ -22,10 +22,14 @@ desc Usuarios;
 
 create table documentarios
 (
-codigo int not null primary key,
+codigo int auto_increment not null primary key,
 nome varchar(40) not null,
 descricao varchar(200) not null,
 diretor varchar(50) not null,
-ano year
+ano year not null,
+idioma varchar(20) not null,
+genero varchar(20) not null,
+estudio varchar(20) not null,
+thumbnail varchar(30) not null
 );
 desc Documentarios;
