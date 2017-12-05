@@ -54,28 +54,30 @@ public class ControleAdmin extends HttpServlet{
 
 		/* Resgatar os dados do formulario: Documentarios*/
 
-
+		int codigo = 4553213;
 		//int codigo = request.getParameter("");
 		String nome = request.getParameter("nomeDoc");
-		String descricao = request.getParameter("sinopseDoc");
+		String sinopse = request.getParameter("sinopseDoc");
 		String diretor = request.getParameter("autorDoc");
-		String ano = request.getParameter("dateDoc");
 		String estudio = request.getParameter("estudioDoc");
-		String genero = request.getParameter("generoDoc");
+		String ano = request.getParameter("dateDoc");
+		//String genero = request.getParameter("generoDoc");
 		String idioma = request.getParameter("idiomaDoc");
-		String thumbnail = request.getParameter("thumbDoc");
+		String url_youtube = request.getParameter("linkDoc");
+		String caminho_thumb = request.getParameter("thumbDoc");
 
 		Documentario documentario = new Documentario();
 		/* Hospedar os dados do Cliente na Bean Cliente*/
-		//documentario.setCodigo(codigo); // Aqui deverá ter uma função para gerar um codigo aleatório, por exemplo um gerador de numeros aleatórios ou colocaru ma função dentro do BD que gere isso automaticamente.
+		documentario.setCodigo(codigo); // Aqui deverá ter uma função para gerar um codigo aleatório, por exemplo um gerador de numeros aleatórios ou colocaru ma função dentro do BD que gere isso automaticamente.
 		documentario.setNome(nome);
-		documentario.setDescricao(descricao);
+		documentario.setSinopse(sinopse);
+		documentario.setEstudio(estudio);
 		documentario.setDiretor(diretor);
 		documentario.setAno(ano);
-		documentario.setEstudio(estudio);
-		documentario.setGenero(genero);
+		//documentario.setGenero(genero);
 		documentario.setIdioma(idioma);
-		documentario.setThumbnail(thumbnail);
+		documentario.setUrl_youtube(url_youtube);
+		documentario.setCaminho_thumb(caminho_thumb);
 
 		if(new AdminDao().cadastrarDocumentario(documentario)){
 			request.setAttribute("msg",

@@ -4,13 +4,14 @@ public class Documentario {
 	//Lucas: Todas as refer�ncias aos c�digos foram comentadas, pois n�o temos um m�todo para gera-los ainda.
 	private int codigo;
 	private String nome;
-	private String descricao;
+	private String sinopse;
+	private String estudio;
 	private String diretor;
 	private String ano;
 	private String idioma;
-	private String genero;
-	private String estudio;
-	private String thumbnail;
+	//private String genero;
+	private String url_youtube;
+	private String caminho_thumb;
 	/* Construtores */
 
 	//Contrutor Vazio
@@ -19,17 +20,18 @@ public class Documentario {
 	}
 
 	//Contrutor Cheio
-	public Documentario(int codigo, String nome, String descricao, String diretor, String ano, String idioma, String genero, String estudio, String thumbnail) {
+	public Documentario(int codigo, String nome, String sinopse, String diretor, String ano, String idioma, /*String genero,*/ String estudio, String url, String caminho_thumb) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
-		this.descricao = descricao;
+		this.sinopse = sinopse;
 		this.diretor = diretor;
+		this.estudio=estudio;
 		this.ano = ano;
 		this.idioma=idioma;
-		this.genero=genero;
-		this.estudio=estudio;
-		this.setThumbnail(thumbnail);
+		//this.genero=genero;
+		this.url_youtube = url;
+		this.caminho_thumb = caminho_thumb;
 	}
 
 	//To String
@@ -38,7 +40,7 @@ public class Documentario {
 		return "Codigo: " + codigo + "\n" +
 				"Nome: " + nome + "\n" +
 				"Diretor: " + diretor + "  Ano: " + ano + "\n" +
-				"\nDescrição: \n" + descricao;
+				"\nSinopse: \n" + sinopse;
 	}
 
 	/* Gets */
@@ -48,8 +50,8 @@ public class Documentario {
 	public String getNome() {
 		return nome;
 	}
-	public String getDescricao() {
-		return descricao;
+	public String getSinopse() {
+		return sinopse;
 	}
 	public String getDiretor() {
 		return diretor;
@@ -65,8 +67,8 @@ public class Documentario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setSinopse(String sinopse) {
+		this.sinopse = sinopse;
 	}
 	public void setDiretor(String diretor) {
 		this.diretor = diretor;
@@ -82,7 +84,7 @@ public class Documentario {
 	public void setIdioma(String idioma) {
 		this.idioma = idioma;
 	}
-
+	/*
 	public String getGenero() {
 		return genero;
 	}
@@ -90,7 +92,7 @@ public class Documentario {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
-
+	*/
 	public String getEstudio() {
 		return estudio;
 	}
@@ -99,11 +101,19 @@ public class Documentario {
 		this.estudio = estudio;
 	}
 
-	public String getThumbnail() {
-		return thumbnail;
+	public String getUrl_youtube() {
+		return url_youtube;
 	}
 
-	public void setThumbnail(String thumbnail) {
-		this.thumbnail = thumbnail;
+	public void setUrl_youtube(String url_youtube) {
+		this.url_youtube = url_youtube;
+	}
+	
+	public String getCaminho_thumb() {
+		return caminho_thumb;
+	}
+
+	public void setCaminho_thumb(String caminho_thumb) {
+		this.caminho_thumb = caminho_thumb;
 	}
 }

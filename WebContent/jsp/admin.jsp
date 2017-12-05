@@ -138,7 +138,7 @@
 	  		<div class="tab-pane fade" id="v-pills-newDoc" role="tabpanel" aria-labelledby="v-pills-newDoc-tab">
 					<h1 class="display-4">Novo documentário: </h1>
 					<hr class="separador">
-					<form name="formNewDoc" id="formNewDoc" action="" method="post">
+					<form name="formNewDoc" id="formNewDoc" action="cadastrarDoc.html" method="post">
 						<!-- Inicio primeira linha -->
 						<div class="form-group">
 							<label for="nomeDoc">Nome do documentário*:</label>
@@ -166,7 +166,7 @@
 						<div class="form-row">
 							<div class="form-group col-md-6 col-sm-6">
 								<label for="dateDoc">Ano*:</label>
-								<input type="date" class="form-control" id="dateDoc" name="dateDoc">
+								<input type="text" class="form-control" id="dateDoc" name="dateDoc">
 								<span id="erro_dateDoc" class="erroFormDoc"></span>
 							</div>
 							<div class="form-group col-md-6 col-sm-6">
