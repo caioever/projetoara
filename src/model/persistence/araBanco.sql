@@ -24,11 +24,11 @@ create table documentarios
 (
 codigo int not null primary key,
 nome varchar(40) not null,
-sinopse varchar(200) not null,
+sinopse varchar(2000) not null,
 estudio varchar(50) not null,
 diretor varchar(50) not null,
-ano varchar(4),
-idioma int,
+ano varchar(10),
+idioma varchar(50),
 url_youtube varchar(300) not null,
 caminho_thumb varchar(300) not null
 );
