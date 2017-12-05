@@ -29,7 +29,7 @@ public class NewUserDao extends Dao{
 				//String data = UtilsBanco.ConverterDataToBanco(c.getDtNasc());
 				stmt.setString(7, c.getSexo());
 				stmt.setString(8, c.getTelefone());
-				stmt.setString(9,UtilsBanco.converterDataToBanco(c.getDtNasc()));
+				stmt.setString(9,UtilsBanco.converterDataBancoToGC(c.getDtNasc()));
 				stmt.execute();
 				success = true;
 				con.commit();
