@@ -88,7 +88,7 @@ $(function() {
 			nomeDoc:{required: "Informe o nome do documentário", maxlength:"Nome muito longo (<20)"},
 			estudioDoc:{required: "Informe o estudio"},
 			autorDoc:{required: "Informe o nome do autor"},
-			dateDoc:{required: "Informe a data"},
+			dateDoc:{required: "Informe o ano que o documentário foi feiro"},
 			generoDoc:{required: "Informe o genero"},
 			idiomaDoc:{required: "informe o idioma do documentário"},
 			//elsePort:{required: true},
