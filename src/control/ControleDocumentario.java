@@ -39,13 +39,12 @@ public class ControleDocumentario extends HttpServlet {
 			
 			if(url.equalsIgnoreCase("/jsp/CatalogoCompleto.html")) {
 				catalogoFull(request, response);
-				System.out.println("teste1");
+				System.out.println("[OK]");
 			}else {
 				response.sendRedirect("/");
-				System.out.println("teste2");
 			}
 		}catch(Exception e) {
-			System.out.println("AAAAAA");
+			System.out.println("ERRO");
 			e.printStackTrace();
 		}
 	}
