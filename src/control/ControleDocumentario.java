@@ -31,7 +31,7 @@ public class ControleDocumentario extends HttpServlet {
 		execute(request, response);
 	}
 	
-	//Função de execução
+	//Funï¿½ï¿½o de execuï¿½ï¿½o
 	protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			//pega a URL
@@ -67,6 +67,7 @@ public class ControleDocumentario extends HttpServlet {
 						"Temos docs novos, venha conhecer..." + 
 						"</div>");
 				request.setAttribute("ld", catalogoFull);
+				//System.out.println(catalogoFull);
 				request.getRequestDispatcher("catalogoFull.jsp").forward(request, response);
 			}
 		}catch(Exception e) {

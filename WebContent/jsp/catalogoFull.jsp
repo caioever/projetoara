@@ -22,8 +22,8 @@
 				<div class="card my-4" style="width: 20rem;">
 					<img class="card-img-top" src="holder.js/318x180" alt="Card image cap">
 					<div class="card-body">
-						<h4 class="card-title">doc.nome</h4>
-						<p class="card-text">doc.descricao</p>
+						<h4 class="card-title">${doc.nome}</h4>
+						<p class="card-text">${doc.sinopse}</p>
 					</div>
 					<a href="#" class="btn btn-danger">Assistir</a>
 				</div>
