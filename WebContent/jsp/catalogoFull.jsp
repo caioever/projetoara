@@ -25,7 +25,11 @@
 						<h4 class="card-title">${doc.nome}</h4>
 						<p class="card-text">${doc.sinopse}</p>
 					</div>
-					<a href="#" class="btn btn-danger">Assistir</a>
+					<form name="botao" id="formCadastro" role="form" action="displaydoc.html" method="post">
+						<!-- <a name="codigo" id="codigo" value="${doc.codigo}" class="btn btn-danger">Assistir</a> -->
+						<input type="radio" id="codigo" name="codigo" value="${doc.codigo}">pesquisar?</input>
+						<input type="submit" class="btn btn-danger" value="Assistir" />
+					</form>
 				</div>
 			</div>
 			</c:forEach>

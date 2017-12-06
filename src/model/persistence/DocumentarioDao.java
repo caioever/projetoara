@@ -10,7 +10,32 @@ public class DocumentarioDao extends Dao{
 	
 	/* Add Documentário */
 	/* Exibir Documentário*/
-	/* Editar Documentário */
+	public Documentario prepDisplay (int codigo) throws Exception {
+		Documentario doc = null;
+		try {
+			open();
+			
+			stmt = con.prepareStatement("SELECT * FROM projetoara.documentarios WHERE documentarios.codigo = ?");
+			stmt.setInt(1, codigo);
+			rs = stmt.executeQuery();
+			if(rs.next()) {
+				doc = new Documentario(codigo, rs.getString("nome"), 
+										rs.getString("sinopse"),
+										rs.getString("diretor"),
+										rs.getString("ano"),
+										rs.getString("idioma"),
+										rs.getString("estudio"),
+										rs.getString("url_youtube"),
+										rs.getString("caminho_thumb"));
+			}
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return doc;
+	}
+	
 	/* Catalogo Completo */
 	public List<Documentario> catalogoFull() throws Exception {
 		List<Documentario> catalogoFull = null;
@@ -41,6 +66,5 @@ public class DocumentarioDao extends Dao{
 		}
 		return catalogoFull;
 	}
-	
 
 }

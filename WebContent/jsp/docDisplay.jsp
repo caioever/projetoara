@@ -1,111 +1,35 @@
 <jsp:include page="topoNav.jsp"></jsp:include>
+</br></br></br>
 
-	<header>
-		<!--Nav top-->
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#"><img src="../img/logoAraSmall.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Ara.</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topBar" aria-controls="topBar" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="topBar">
-				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-					<li class="nav-item active">
-						<a class="nav-link" href="header">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#catalogo">Catálogo</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#sobreNos">Sobre</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#contato">Contato</a>
-					</li>
-				</ul>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="d" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-				<ul class="navbar-nav my-2 my-lg-0">
-					<li class="dropdown">
-							<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Login
-							</button>
-							<div class="dropdown-menu dropdown-menu-right" style="padding: 15px; padding-bottom: 0px; width: 300px;">
-								<form action="[AÇAO]" method="post" accept-charset="UTF-8">
-									<label for="logEmail">Email</label>
-									<input type="email" class="form-control" id="logEmail" aria-describedby="emailHelp" placeholder="Digite seu email">
-
-									<label for="logPass">Senha</label>
-									<input type="password" class="form-control" id="logPass" placeholder="digite sua senha">
-									<small id="emailHelp" class="form-text text-muted">Esqueceu sua senha?</small>
-									<label class="form-check-label">
-										<input type="checkbox" class="form-check-input">
-										Lembrar-se
-									</label>
-
-									<input class="btn btn-danger" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Entrar" />
-								</form>
-								<div class="dropdown-divider"></div>
-								<input class="btn btn-danger" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Cria uma nova conta" />
-								<div class="dropdown-divider"></div>
-							</div>
-					</li>
-				</ul>
-
-			</div>
-		</nav>
-		<!--Fim Nav top-->
-	</header>
-
-	</br></br></br></br></br>
 <div class="row">
-<div class="col-xs-1 col-sm-2 col-lg-2"></div>
-<div class="col-xs-12 col-sm-12 col-lg-5">
-	<div><h2 class="text-left" style="margin-bottom: 10px">Rodrigo Amarante - Tardei</br></h2></div>
-	<div class="embed-responsive embed-responsive-4by3">
-	    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fJ2zWRWOp_s"></iframe>
+	${msg}
+	<div class="col-xs-1 col-sm-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-lg-5">
+		<div><h2 class="text-left" style="margin-bottom: 10px">${d.nome}</br></h2></div>
+		<div class="embed-responsive embed-responsive-4by3">
+		    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${d.url_youtube}"></iframe>
+		</div>
 	</div>
-</div>
-<div class="col-xs-10 col-sm-10 col-lg-3" style="margin-left: 5px">
-<h2></br></h2><h4>Sinópse </h4><br>
-<div>
-<p>
-Tardei, tardei, tardei
-Mas cheguei, enfim
-Pra cada adeus um nó
-Cada conta, o fio do rosário que eu
-Vim banhar, pra lhe dar
+	<div class="col-xs-10 col-sm-10 col-lg-3" style="margin-left: 5px">
+		<h2></br></h2><h4>Sinópse:</h4>
+		<tr>
+			<td><p>${d.sinopse}</p></td>
+		</tr>
+		<hr class="separador">
+		<div class="inform-doc">
+			<p><b>Diretor:</b> ${d.diretor} | <b>Ano:</b> ${d.ano} |  <b>Nota:</b> 5/5 </p>
+		</div>
+		<hr class="separador">
+		<div class="inform-doc">
+			<p><b>Palavras Chaves:</b></p>
+		</div>
+		<div class="text-danger inform-doc"><p>| MPB | Indie | Rock Alternativo | MPB | Indie | Rock Alternativo | MPB | Indie | Rock Alternativo | MPB | Indie | Rock Alternativo | </p></div>
 
-Tardei, tardei, tardei
-Só na volta eu vi
-Qual senda me levou
-Qual me trouxe aqui
-Pra encontrar você
-Onde está, meu lugar?
-
-Desceu pelo rio
-Da terra pro mar
-Um fio de prata que me leva
-
-Tardei, tardei, tardei
-Que na vinda eu quis
-Pela primeira vez
-Nunca mais partir
-E esperar você
-O meu lugar, onde está?
-
-Desceu pelo rio
-Da terra pro mar
-Um fio de prata que me leva</p>
-<br>
-</div>
-<div class="inform-doc">
-<p><b>Diretor:</b> Rodrigo Amarante | <b>Ano:</b> 2014 |  <b>Nota:</b> 5/5 </p>
-</div>
-<div class="inform-doc">
-<p><b>Palavras Chaves:</b></p>
-</div>
-<div class="text-danger inform-doc"><p>| MPB | Indie | Rock Alternativo | MPB | Indie | Rock Alternativo | MPB | Indie | Rock Alternativo | MPB | Indie | Rock Alternativo | </p></div>
-
-</div>
+	</div>
 </div>
 
 

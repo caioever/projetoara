@@ -229,7 +229,7 @@
 							<span id="erro_thumbDoc" class="erroFormDoc"></span>
 						</div>
 						<div class="form-group">
-							<label for="linkDoc">link do documentário*:</label>
+							<label for="linkDoc">ID do documentário no youtube*:</label>
 							<input type="text" class="form-control" id="linkDoc" name="linkDoc">
 							<span id="erro_linkDoc" class="erroFormDoc"></span>
 						</div>

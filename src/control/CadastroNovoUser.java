@@ -50,7 +50,7 @@ public class CadastroNovoUser extends HttpServlet {
 		}
 	}
 
-	//cadastro de usu�rio
+	//cadastro de usuario
 	protected void cadNewUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		try{

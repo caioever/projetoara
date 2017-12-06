@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.entity.Documentario;
 import model.persistence.DocumentarioDao;
 
-@WebServlet({"/ControleDocumentario", "/jsp/CatalogoCompleto.html"})
+@WebServlet({"/ControleDocumentario", "/jsp/CatalogoCompleto.html", "/jsp/displaydoc.html"})
 
 public class ControleDocumentario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -31,7 +31,7 @@ public class ControleDocumentario extends HttpServlet {
 		execute(request, response);
 	}
 	
-	//Fun��o de execu��o
+	//Funcaoo de execucao
 	protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			//pega a URL
@@ -39,7 +39,10 @@ public class ControleDocumentario extends HttpServlet {
 			
 			if(url.equalsIgnoreCase("/jsp/CatalogoCompleto.html")) {
 				catalogoFull(request, response);
-				System.out.println("[OK]");
+				System.out.println("[OK - Catalogo completo");
+			}if (url.equalsIgnoreCase("/jsp/displaydoc.html")){
+				displaydoc(request, response);
+				System.out.println("[OK - DISPLAY DOCUMENTARIO");
 			}else {
 				response.sendRedirect("/");
 			}
@@ -68,6 +71,30 @@ public class ControleDocumentario extends HttpServlet {
 				request.setAttribute("ld", catalogoFull);
 				//System.out.println(catalogoFull);
 				request.getRequestDispatcher("catalogoFull.jsp").forward(request, response);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/* Apresenta o diplay do documentário com o video no youtube */
+	protected void displaydoc(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			//Chama o documentário baseado no codigo dele
+			int codigo = Integer.parseInt(request.getParameter("codigo"));
+			
+			//Chama a classe Dao
+			DocumentarioDao dd = new DocumentarioDao();
+			
+			//Aciona o metodo da classe dao que retorna os dados de um documentario a partir do codigo
+			Documentario doc = dd.prepDisplay(codigo);
+			
+			if(doc == null) {
+				request.setAttribute("msg", "<div class='alert alert-warning'> Documentario nao encontrado, ou apagado</div>");
+				request.getRequestDispatcher("docDisplay.jsp").forward(request,  response);
+			}else {
+				request.setAttribute("d", doc);
+				request.getRequestDispatcher("docDisplay.jsp").forward(request,  response);
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

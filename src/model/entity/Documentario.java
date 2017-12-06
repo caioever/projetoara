@@ -1,7 +1,7 @@
 package model.entity;
 
 public class Documentario {
-	//Lucas: Todas as refer�ncias aos c�digos foram comentadas, pois n�o temos um m�todo para gera-los ainda.
+	//Lucas: Todas as referencias aos codigos foram comentadas, pois nao temos um metodo para gera-los ainda.
 	private int codigo;
 	private String nome;
 	private String sinopse;
